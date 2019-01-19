@@ -1,24 +1,17 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the SubscriptionActivityPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Component } from "@angular/core";
+import { NavController, NavParams } from "ionic-angular";
+import { mockSubscriptionActivty } from "../../../common/activity";
 
 @Component({
-  selector: 'page-subscription-activity',
-  templateUrl: 'subscription-activity.html',
+  selector: "page-subscription-activity",
+  templateUrl: "subscription-activity.html"
 })
 export class SubscriptionActivityPage {
+  activity = mockSubscriptionActivty;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SubscriptionActivityPage');
+    console.log("ionViewDidLoad SubscriptionActivityPage");
   }
-
 }
