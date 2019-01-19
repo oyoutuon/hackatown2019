@@ -1,10 +1,31 @@
 <ion-header>
-  <ion-navbar> <ion-title>landing</ion-title> </ion-navbar>
-</ion-header>
-
-<ion-content padding text-center>
-  <h1>Lorem ipsum</h1>
-  <img [navPush]="searchPage" id="avatar" src="/assets/imgs/profile.jpeg" />
-  <div>or</div>
-  <a [navPush]="searchPage"> <h3>continue without login</h3> </a>
-</ion-content>
+    <ion-navbar> <ion-title>Landing</ion-title> </ion-navbar>
+  </ion-header>
+  <ion-content padding>
+  <ion-card padding-vertical>
+  <ion-card-content padding text-center>
+    <img [navPush]="searchPage" id="avatar" src="/assets/imgs/profile.jpeg" />
+    <ion-card-title>Login with your VDM account</ion-card-title>
+    <ion-list>
+    <ion-item>
+        <ion-label stacked>Username</ion-label>
+        <ion-input type="text" placeholder="Steven Lam"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input type="password" placeholder="uwu"></ion-input>
+    </ion-item>
+    
+    </ion-list>
+    
+    <div padding>
+      <button ion-button>Sign In</button>
+    </div>
+  
+  
+    <div>or</div>
+    <a [navPush]="searchPage"> <h3>Continue without login</h3> </a>
+  </ion-card-content>
+  </ion-card>
+  </ion-content>
