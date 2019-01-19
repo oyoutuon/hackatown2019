@@ -12,10 +12,10 @@
       <div ion-item><p>Location:</p>{{ activity.location.name }}</div>
       <div ion-item><p>Type:</p>{{ activity.type }}</div>
       <div ion-item><p>Price:</p>{{ activity.price }} $</div>
-      <div ion-item><p>Date:</p>{{ activity.startTime | date: "longDate" }}</div>
+      <div ion-item><p>Date:</p>{{ activity.time.dotw }}, {{ activity.time.startTime | date: "longDate" }}</div>
       <div ion-item><p>Time:</p>
-        {{ activity.startTime | date: "shortTime" }} to
-        {{ activity.endTime | date: "shortTime" }}
+        {{ activity.time.startTime | date: "shortTime" }} to
+        {{ activity.time.endTime | date: "shortTime" }}
       </div>
       <div ion-item><p>Traffic:</p>{{ activity.traffic }}</div>
       <div ion-item><p>Person in charge:</p>{{ activity.manager }}</div>
