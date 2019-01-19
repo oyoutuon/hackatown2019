@@ -9,18 +9,19 @@
     </ion-card-header>
     <img [src]="activity.imgUrl" />
     <ion-list>
-      <div ion-item>{{ activity.location.name }}</div>
-      <div ion-item>{{ activity.price }} $</div>
-      <div ion-item>{{ activity.startTime | date: "longDate" }}</div>
-      <div ion-item>{{ activity.type }}</div>
-      <div ion-item>{{ activity.traffic }}</div>
-      <div ion-item>{{ activity.manager }}</div>
-      <div ion-item>
+      <div ion-item><p>Location:</p>{{ activity.location.name }}</div>
+      <div ion-item><p>Type:</p>{{ activity.type }}</div>
+      <div ion-item><p>Price:</p>{{ activity.price }} $</div>
+      <div ion-item><p>Period:</p>{{ activity.startTime | date: "longDate" }}</div>
+      <div ion-item><p>Time:</p>
         {{ activity.startTime | date: "shortTime" }} to
         {{ activity.endTime | date: "shortTime" }}
       </div>
+      <div ion-item><p>Traffic:</p>{{ activity.traffic }}</div>
+      <div ion-item><p>Person in Charge:</p>{{ activity.manager }}</div>
     </ion-list>
     <ion-card-content>
+      <ion-card-title>Notes</ion-card-title>
       <p>{{ activity.description }}</p>
     </ion-card-content>
     <div text-center><button small ion-button disabled>register</button></div>
