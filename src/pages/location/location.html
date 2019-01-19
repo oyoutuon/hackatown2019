@@ -3,7 +3,17 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-card> </ion-card>
   <agm-map [latitude]="lat" [longitude]="lng">
     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
   </agm-map>
+  <ion-card-content>
+    <ion-card-title> {{ location.name }} </ion-card-title>
+    <ion-list>
+      <div ion-item>{{ location.address }}</div>
+      <div ion-item>{{ location.email }}</div>
+      <div ion-item>{{ location.phoneNumber }}</div>
+    </ion-list>
+    <div *ngFor="let activity of location.activities">{{ activity.sport }}</div>
+  </ion-card-content>
 </ion-content>
