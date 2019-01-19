@@ -1,9 +1,7 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
-import {
-  PunctualActivity,
-  mockPunctualActivty
-} from "../../../common/activity";
+import { PunctualActivity } from "../../../common/activity";
+import { mockPunctualActivty } from "../../assets/data/mocks";
 
 @Component({
   selector: "page-punctual-activity",

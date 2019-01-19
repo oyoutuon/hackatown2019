@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
-import { Location, mockLocation } from "../../../common/location";
+import { Location } from "../../../common/location";
+import { mockLocation } from "../../assets/data/mocks";
 
 @Component({
   selector: "page-location",
