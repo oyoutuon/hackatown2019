@@ -5,7 +5,6 @@ import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
 
 import { MyApp } from "./app.component";
-import { HomePage } from "../pages/home/home";
 import { DebugPage } from "../pages/debug/debug";
 import { LandingPage } from "../pages/landing/landing";
 import { SearchPage } from "../pages/search/search";
@@ -17,7 +16,6 @@ import { LocationPage } from "../pages/location/location";
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     DebugPage,
     LandingPage,
     SearchPage,
@@ -30,7 +28,6 @@ import { LocationPage } from "../pages/location/location";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     DebugPage,
     LandingPage,
     SearchPage,
