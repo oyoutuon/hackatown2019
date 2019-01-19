@@ -1,24 +1,17 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LandingPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Component } from "@angular/core";
+import { NavController, NavParams } from "ionic-angular";
+import { SearchPage } from "../search/search";
 
 @Component({
-  selector: 'page-landing',
-  templateUrl: 'landing.html',
+  selector: "page-landing",
+  templateUrl: "landing.html"
 })
 export class LandingPage {
+  searchPage = SearchPage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LandingPage');
+    console.log("ionViewDidLoad LandingPage");
   }
-
 }
