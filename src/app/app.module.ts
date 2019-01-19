@@ -14,6 +14,7 @@ import { PunctualActivityPage } from "../pages/punctual-activity/punctual-activi
 import { SubscriptionActivityPage } from "../pages/subscription-activity/subscription-activity";
 import { LocationPage } from "../pages/location/location";
 
+import { AgmCoreModule } from "@agm/core";
 @NgModule({
   declarations: [
     MyApp,
@@ -26,7 +27,13 @@ import { LocationPage } from "../pages/location/location";
     SubscriptionActivityPage,
     LocationPage
   ],
-  imports: [BrowserModule, IonicModule.forRoot(MyApp)],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(MyApp),
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyAuFeSreL0UefHrw_HKXkXeYZPtapIJdMg"
+    })
+  ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
