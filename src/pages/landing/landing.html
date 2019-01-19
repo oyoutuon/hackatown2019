@@ -9,15 +9,15 @@
     <ion-list>
       <ion-item>
         <ion-label stacked>Username</ion-label>
-        <ion-input type="text" placeholder="Steven Lam"></ion-input>
+        <ion-input disabled type="text" placeholder="Already logged in as Steven Lam"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label stacked>Password</ion-label>
-        <ion-input type="password" placeholder="uwu"></ion-input>
+        <ion-input type="password"></ion-input>
       </ion-item>
     </ion-list>
     <div padding-top>
-      <button ion-button [navPush]="searchPage">Sign In</button>
+      <button ion-button [navPush]="searchPage">Log In</button>
     </div>
   
     <div padding>or</div>
