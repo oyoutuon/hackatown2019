@@ -1,24 +1,17 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LocationPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Component } from "@angular/core";
+import { NavController, NavParams } from "ionic-angular";
+import { Location } from "../../../common/location";
 
 @Component({
-  selector: 'page-location',
-  templateUrl: 'location.html',
+  selector: "page-location",
+  templateUrl: "location.html"
 })
 export class LocationPage {
+  location: Location;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LocationPage');
+    console.log("ionViewDidLoad LocationPage");
   }
-
 }

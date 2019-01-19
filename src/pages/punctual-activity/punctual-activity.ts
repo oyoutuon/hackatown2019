@@ -1,24 +1,17 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the PunctualActivityPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Component } from "@angular/core";
+import { NavController, NavParams } from "ionic-angular";
+import { PunctualActivity } from "../../../common/activity";
 
 @Component({
-  selector: 'page-punctual-activity',
-  templateUrl: 'punctual-activity.html',
+  selector: "page-punctual-activity",
+  templateUrl: "punctual-activity.html"
 })
 export class PunctualActivityPage {
+  activity: PunctualActivity;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PunctualActivityPage');
+    console.log("ionViewDidLoad PunctualActivityPage");
   }
-
 }
