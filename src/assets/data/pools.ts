@@ -1,4 +1,4 @@
-{
+export const pools = {
   "places": [
     {
       
