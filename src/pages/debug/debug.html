@@ -1,0 +1,9 @@
+<ion-header>
+  <ion-navbar> <ion-title>debug</ion-title> </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button *ngFor="let name of keys(pages)" [navPush]="pages[name]">
+    {{ name }}
+  </button>
+</ion-content>
