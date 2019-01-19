@@ -1,18 +1,15 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
-import {
-  mockPunctualActivty,
-  mockSubscriptionActivty,
-  Activity
-} from "../../../common/activity";
+import { Activity } from "../../../common/activity";
 import { SubscriptionActivityPage } from "../subscription-activity/subscription-activity";
+import { mockAvtivities } from "../../assets/data/mocks";
 
 @Component({
   selector: "page-results",
   templateUrl: "results.html"
 })
 export class ResultsPage {
-  results: Activity[] = [mockPunctualActivty, mockSubscriptionActivty];
+  results: Activity[] = mockAvtivities;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 

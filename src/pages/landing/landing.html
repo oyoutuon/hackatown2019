@@ -4,28 +4,30 @@
   <ion-content padding>
   <ion-card padding-vertical>
   <ion-card-content padding text-center>
-    <img [navPush]="searchPage" id="avatar" src="/assets/imgs/profile.jpeg" />
-    <ion-card-title>Login with your VDM account</ion-card-title>
+    <div text-center><ion-img [navPush]="searchPage" id="avatar" src="/assets/imgs/profile.jpeg"></ion-img></div>
+    <ion-card-title>Login with your VDM Account</ion-card-title>
     <ion-list>
-    <ion-item>
+      <ion-item>
         <ion-label stacked>Username</ion-label>
         <ion-input type="text" placeholder="Steven Lam"></ion-input>
-    </ion-item>
-    
-    <ion-item>
+      </ion-item>
+      <ion-item>
         <ion-label stacked>Password</ion-label>
         <ion-input type="password" placeholder="uwu"></ion-input>
-    </ion-item>
-    
+      </ion-item>
     </ion-list>
-    
-    <div padding>
-      <button ion-button>Sign In</button>
+    <div padding-top>
+      <button ion-button [navPush]="searchPage">Sign In</button>
     </div>
   
-  
-    <div>or</div>
+    <div padding>or</div>
+
     <a [navPush]="searchPage"> <h3>Continue without login</h3> </a>
+
+
   </ion-card-content>
   </ion-card>
+  <ion-item>
+      <ion-label stacked>Note: VDM stands for "Ville de Montréal"</ion-label>
+  </ion-item>
   </ion-content>

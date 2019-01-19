@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
-import { mockSubscriptionActivty } from "../../../common/activity";
+import { mockSubscriptionActivty } from "../../assets/data/mocks";
 
 @Component({
   selector: "page-subscription-activity",
