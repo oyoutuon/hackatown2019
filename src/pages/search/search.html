@@ -14,5 +14,41 @@
 
 
 <ion-content padding>
+    <form>
+        <ion-item>
+          <ion-label>Sport</ion-label>
+          <ion-input type="text" [(ngModel)]="sport" name="sport"></ion-input>
+        </ion-item>
 
+        <ion-item>
+          <ion-label>Location</ion-label>
+          <ion-input type="text" [(ngModel)]="location" name="location"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Price</ion-label>
+          <ion-input type="number" [(ngModel)]="price" name="price"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Type</ion-label>
+          <ion-select [(ngModel)]="type" name="type">
+            <ion-option *ngFor="let mockType of mockTypes" [value]="mockType">{{ mockType }}</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Traffic</ion-label>
+          <ion-select [(ngModel)]="traffic" name="traffic">
+            <ion-option *ngFor="let mockTraffic of mockTraffics" [value]="mockTraffic">{{ mockTraffic }}</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Manager</ion-label>
+          <ion-input type="text" [(ngModel)]="manager" name="manager"></ion-input>
+        </ion-item>
+
+        <button ion-button type="submit" block>Search</button>
+      </form>
 </ion-content>
