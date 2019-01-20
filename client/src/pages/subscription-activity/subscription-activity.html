@@ -29,7 +29,7 @@
       <div ion-item>
         <p><ion-icon name="calendar"></ion-icon>Time</p>
         <div *ngFor="let time of activity.times">
-          {{ time.dotw }}, {{ time.startTime | date: "shortTime" }} to
+          {{ time.dotw }} {{ time.startTime | date: "shortTime" }} to
           {{ time.endTime | date: "shortTime" }}
         </div>
       </div>

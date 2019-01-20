@@ -3,9 +3,7 @@ import { ErrorHandler, NgModule } from "@angular/core";
 import { IonicApp, IonicErrorHandler, IonicModule } from "ionic-angular";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
-
 import { MyApp } from "./app.component";
-import { DebugPage } from "../pages/debug/debug";
 import { LandingPage } from "../pages/landing/landing";
 import { SearchPage } from "../pages/search/search";
 import { ResultsPage } from "../pages/results/results";
@@ -13,13 +11,11 @@ import { PunctualActivityPage } from "../pages/punctual-activity/punctual-activi
 import { SubscriptionActivityPage } from "../pages/subscription-activity/subscription-activity";
 import { LocationPage } from "../pages/location/location";
 import { HttpClientModule } from "@angular/common/http";
-
 import { AgmCoreModule } from "@agm/core";
 import { DataProvider } from '../providers/data/data';
 @NgModule({
   declarations: [
     MyApp,
-    DebugPage,
     LandingPage,
     SearchPage,
     ResultsPage,
@@ -38,7 +34,6 @@ import { DataProvider } from '../providers/data/data';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    DebugPage,
     LandingPage,
     SearchPage,
     ResultsPage,
@@ -53,4 +48,4 @@ import { DataProvider } from '../providers/data/data';
     DataProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }
