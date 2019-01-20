@@ -10,6 +10,8 @@ import { ActivityPage } from '../pages/activity/activity';
 import { CreateActivityPage } from '../pages/create-activity/create-activity';
 import { DebugPage } from '../pages/debug/debug';
 import { LandingPage } from '../pages/landing/landing';
+import { DataProvider } from '../providers/data/data';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { LandingPage } from '../pages/landing/landing';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -36,7 +39,8 @@ import { LandingPage } from '../pages/landing/landing';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DataProvider
   ]
 })
 export class AppModule {}

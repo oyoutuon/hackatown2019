@@ -1,25 +1,37 @@
-import { Component } from "@angular/core";
-import { NavController, NavParams, AlertController } from "ionic-angular";
-import { DateRange } from "../../../../common/activity";
+import { Component } from '@angular/core';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
+import { DateRange, Activity, SubscriptionActivity, PunctualActivity } from '../../../../common/activity';
+import { HttpClient } from '@angular/common/http';
+
+const SERVER_URL = 'https://hackatown2019-server.herokuapp.com/';
 
 @Component({
-  selector: "page-create-activity",
-  templateUrl: "create-activity.html"
+  selector: 'page-create-activity',
+  templateUrl: 'create-activity.html'
 })
 export class CreateActivityPage {
   mockTypes = [
-    "Freeplay",
-    "Beginner Course",
-    "Intermediate Course",
-    "Advanced Course"
+    'Freeplay',
+    'Beginner Course',
+    'Intermediate Course',
+    'Advanced Course'
   ];
 
-  sport: string = "";
-  location: string = "";
-  price: number;
-  type: string = "";
-  manager: string = "";
-  description: string = "";
+  activity: Activity = {
+    sport: '',
+    location: {
+      'address': '',
+      'name': 'New Location',
+      'email': 'Zackery_Gleason@yahoo.com',
+      'phoneNumber': '028.923.7795'
+    },
+    price: null,
+    type: '',
+    manager: '',
+    description: '',
+    traffic: '',
+    imgUrl: '',
+  }
   isSubscription: boolean;
   period: DateRange = { startTime: null, endTime: null };
   times: DateRange[] = [];
@@ -28,22 +40,23 @@ export class CreateActivityPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController,
+    public http: HttpClient
   ) {
     let alert = this.alertCtrl.create({
-      title: "Choose Activity Type",
+      title: 'Choose Activity Type',
       buttons: [
         {
-          text: "Subscription",
-          role: "cancel",
+          text: 'Subscription',
+          role: 'cancel',
           handler: () => {
             this.isSubscription = true;
             return true;
           }
         },
         {
-          text: "Punctual",
-          role: "cancel",
+          text: 'Punctual',
+          role: 'cancel',
           handler: () => {
             this.isSubscription = false;
             return true;
@@ -54,7 +67,24 @@ export class CreateActivityPage {
     alert.present();
   }
 
-  onSubmit() {}
+  onSubmit() {
+    if (this.isSubscription) {
+      (this.activity as SubscriptionActivity).period = this.period;
+      (this.activity as SubscriptionActivity).times = this.times;
+    }
+    else {
+      (this.activity as PunctualActivity).time = this.time;
+    }
 
-  ionViewDidLoad() {}
+    const body: any = {
+      'activity': this.activity
+    }
+
+    this.http.post(SERVER_URL + 'activity', body, { headers: { 'Content-Type': 'application/json' } })
+      .toPromise()
+      .then(() => console.log('POST'))
+      .catch((e) => console.error(e));
+  }
+
+  ionViewDidLoad() { }
 }
