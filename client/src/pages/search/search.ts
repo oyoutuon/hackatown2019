@@ -18,10 +18,12 @@ export class SearchPage {
 
   sport: string = "";
   location: string = "";
-  price: number;
+  priceMin: number;
+  priceMax: number;
   type: string = "";
   traffic: string = "";
   manager: string = "";
+  date: Date;
 
   constructor(
     public navCtrl: NavController,
@@ -46,11 +48,19 @@ export class SearchPage {
       );
       searchFilters.push("location");
     }
-    if (this.price !== undefined && this.price !== null) {
+    if (this.priceMin !== undefined && this.priceMin !== null
+      || this.priceMax !== undefined && this.priceMax !== null) {
       filterResults = filterResults.filter(
-        activity => activity.price === this.price
-      );
+        activity =>  {
+          return this.between(activity.price, this.priceMin, this.priceMax);
+      });
       searchFilters.push("price");
+    }
+    if (this.date) {
+      // filterResults = filterResults.filter(
+      //   activity => activity.date === this.date
+      // );
+      searchFilters.push("date");
     }
     if (this.type) {
       filterResults = filterResults.filter(
@@ -78,5 +88,9 @@ export class SearchPage {
 
   ionViewDidLoad() {
     console.log("ionViewDidLoad SearchPage");
+  }
+
+  between(x: number, min: number, max: number) {
+    return x >= min && x <= max;
   }
 }
