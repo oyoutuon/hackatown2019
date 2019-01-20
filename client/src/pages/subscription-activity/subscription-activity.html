@@ -10,36 +10,36 @@
     <img [src]="activity.imgUrl" />
     <ion-list>
       <div ion-item (click)="onClick()">
-        <p><ion-icon name="pin"></ion-icon>Location:<ion-icon name="arrow-dropright" padding-left></ion-icon></p>
+        <p><ion-icon name="pin"></ion-icon>Address</p>
         {{ activity.location.name }}
       </div>
       <div ion-item>
-        <p><ion-icon name="checkmark-circle"></ion-icon>Type:</p>
+        <p><ion-icon name="checkmark-circle"></ion-icon>Type</p>
         {{ activity.type }}
       </div>
       <div ion-item>
-        <p><ion-icon name="cash"></ion-icon>Price:</p>
+        <p><ion-icon name="cash"></ion-icon>Price</p>
         {{ activity.price }} $
       </div>
       <div ion-item>
-        <p><ion-icon name="calendar"></ion-icon>Period:</p>
+        <p><ion-icon name="calendar"></ion-icon>Period</p>
         {{ activity.period.startTime | date: "longDate" }} to
         {{ activity.period.endTime | date: "longDate" }}
       </div>
       <div ion-item>
-        <p><ion-icon name="calendar"></ion-icon>Time:</p>
+        <p><ion-icon name="calendar"></ion-icon>Time</p>
         <div *ngFor="let time of activity.times">
           {{ time.dotw }}, {{ time.startTime | date: "shortTime" }} to
           {{ time.endTime | date: "shortTime" }}
         </div>
       </div>
       <div ion-item>
-        <p><ion-icon name="people"></ion-icon>Traffic:</p>
+        <p><ion-icon name="people"></ion-icon>Traffic</p>
         {{ activity.traffic }}
       </div>
       <div ion-item>
         <ion-avatar item-start> <img [src]="fakeAvatar" /> </ion-avatar>
-        <p>Person in Charge:</p>
+        <p>Person in Charge</p>
         {{ activity.manager }}
       </div>
     </ion-list>
@@ -47,6 +47,6 @@
       <ion-card-title>Notes</ion-card-title>
       <p>{{ activity.description }}</p>
     </ion-card-content>
-    <div text-center><button small ion-button disabled>register</button></div>
+    <div text-center><button small ion-button disabled>Register</button></div>
   </ion-card>
 </ion-content>
