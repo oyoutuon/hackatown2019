@@ -14,7 +14,7 @@ export class ResultsPage {
 
   parks: Location[] = mockParks;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log(this.parks);
+    console.log(this.results);
   }
 
   ionViewDidLoad() {}
