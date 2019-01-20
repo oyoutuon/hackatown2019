@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
-import { Activity } from "../../../common/activity";
+import { Activity, SubscriptionActivity } from "../../../common/activity";
 import { SubscriptionActivityPage } from "../subscription-activity/subscription-activity";
 import { mockAvtivities } from "../../assets/data/mocks";
 
@@ -18,5 +18,9 @@ export class ResultsPage {
   onSelect(result: Activity) {
     const page = SubscriptionActivityPage;
     this.navCtrl.push(page);
+  }
+
+  isSubscription(result: any): result is SubscriptionActivity {
+    return result.period !== undefined;
   }
 }
