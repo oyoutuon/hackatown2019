@@ -1,4 +1,4 @@
-export const parcActivities = [
+export const parkActivities = [
   {
     "@id": "368",
     activite_nom_fr: "Balade en carriole et tire sur la neige ($)",
@@ -9,13 +9,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=368",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=368",
     date_creation: "2018-12-14 15:06:22",
     date_modification: "2018-12-14 15:17:42",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "74"
       },
       nom_fr: "Parc-nature du Cap-Saint-Jacques",
@@ -37,13 +37,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=344",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=344",
     date_creation: "2018-11-19 13:45:45",
     date_modification: "2018-11-30 15:03:43",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "75"
         },
@@ -81,13 +81,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=365",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=365",
     date_creation: "2018-12-10 15:02:05",
     date_modification: "2018-12-10 15:03:50",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "72"
       },
       nom_fr: "Parc-nature du Bois-de-Liesse",
@@ -109,13 +109,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=231",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=231",
     date_creation: "2018-01-25 14:27:53",
     date_modification: "2018-11-19 15:39:13",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "83"
       },
       nom_fr: "Parc des Rapides",
@@ -136,20 +136,20 @@ export const parcActivities = [
     },
     photo: {
       url:
-        "http://montreal2.qc.ca/rep_parcs/media/images/application/me_act_cardio_nordique_id58.jpg",
+        "http://montreal2.qc.ca/rep_parks/media/images/application/me_act_cardio_nordique_id58.jpg",
       alt_fr: "Cardio plein air",
       credit_fr: []
     },
     description_fr:
       '<p>Dans un gym à ciel ouvert, offrez-vous des cours de conditionnement physique avec des instructeurs certifiés et dynamiques. Un entraînement complet, une bonne oxygénation et de belles rencontres.</p><p><strong>Renseignements&nbsp;:</strong>&nbsp;&nbsp;1 877 327-5530&nbsp;•&nbsp; <a href="https://www.cardiopleinair.ca/" target="_blank" title="Cardio Plein Air">www.cardiopleinair.ca</a></p><p>&nbsp;</p>',
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=58",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=58",
     date_creation: "2012-11-26 11:14:37",
     date_modification: "2019-01-07 14:55:17",
     tarification_fr: "<p>&nbsp;</p><p>&nbsp;</p>",
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "71"
         },
@@ -200,7 +200,7 @@ export const parcActivities = [
     galerie_photos: [],
     reglements: {
       reglements_intro_fr:
-        "<p><strong>Connaissez-vous les règlements des grands parcs?</strong></p><p>Dans le but d&#039;assurer la protection des ressources naturelles et la sécurité du public, plusieurs règlements sont en vigueur dans les grands parcs. Ces règlements s&#039;appliquent selon qu&#039;il s&#039;agit d&#039;un grand parc relevant de l&#039;agglomération de Montréal ou du conseil municipal de la Ville de Montréal. Quiconque contrevient à ces règlements commet une infraction et est passible d&#039;une amende de 100 $ à 1 000 $.</p>"
+        "<p><strong>Connaissez-vous les règlements des grands parks?</strong></p><p>Dans le but d&#039;assurer la protection des ressources naturelles et la sécurité du public, plusieurs règlements sont en vigueur dans les grands parks. Ces règlements s&#039;appliquent selon qu&#039;il s&#039;agit d&#039;un grand park relevant de l&#039;agglomération de Montréal ou du conseil municipal de la Ville de Montréal. Quiconque contrevient à ces règlements commet une infraction et est passible d&#039;une amende de 100 $ à 1 000 $.</p>"
     }
   },
   {
@@ -213,13 +213,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=201",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=201",
     date_creation: "2017-10-25 11:23:11",
     date_modification: "2018-12-06 08:59:35",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "74"
       },
       nom_fr: "Parc-nature du Cap-Saint-Jacques",
@@ -241,13 +241,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=369",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=369",
     date_creation: "2019-01-14 11:21:18",
     date_modification: "2019-01-14 11:29:47",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "86"
       },
       nom_fr: "Parc Frédéric-Back",
@@ -269,13 +269,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=228",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=228",
     date_creation: "2017-12-19 15:06:03",
     date_modification: "2018-05-20 22:24:02",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "71"
         },
@@ -318,13 +318,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=338",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=338",
     date_creation: "2018-11-14 13:33:36",
     date_modification: "2018-11-19 09:42:59",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "74"
       },
       nom_fr: "Parc-nature du Cap-Saint-Jacques",
@@ -347,13 +347,13 @@ export const parcActivities = [
     description_fr:
       "<p><strong>Du 12 janvier au 24 février 2019 - 7 séances</strong></p><p>Cours de ski de fond pour enfants, adolescents et adultes.<br />Entraîneurs certifiés par Ski de fond Québec.<br /><br /><strong>- - - - - <br /><br />Réservation obligatoire.</strong><br /><strong>Nombre de places limitées à 8 enfants par groupe.<br /></strong><br />Inscription en ligne (www.guepe.qc.ca) ou par téléphone au 514 280-6829, poste 1.<br /><strong>Période de pré-inscription:</strong> 12 au 18 novembre 2018<br /><strong>Période d’inscription:</strong>19 novembre 2018 au 4 janvier 2019</p><p><strong><strong>- - - - - </strong></strong></p>",
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=337",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=337",
     date_creation: "2018-11-12 13:39:45",
     date_modification: "2018-12-19 11:59:12",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "81"
         },
@@ -401,13 +401,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=355",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=355",
     date_creation: "2018-11-23 10:55:30",
     date_modification: "0000-00-00 00:00:00",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "86"
       },
       nom_fr: "Parc Frédéric-Back",
@@ -429,13 +429,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=346",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=346",
     date_creation: "2018-11-19 14:16:05",
     date_modification: "2018-11-30 15:05:15",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "82"
       },
       nom_fr: "Parc-nature de la Pointe-aux-Prairies",
@@ -457,13 +457,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=357",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=357",
     date_creation: "2018-11-27 11:27:10",
     date_modification: "2018-11-30 11:28:37",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "81"
         },
@@ -493,13 +493,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=176",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=176",
     date_creation: "2017-10-20 12:14:49",
     date_modification: "2018-12-18 08:28:04",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "82"
         },
@@ -529,13 +529,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=361",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=361",
     date_creation: "2018-12-06 09:10:17",
     date_modification: "2018-12-06 09:10:25",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "77"
       },
       nom_fr: "Parc Jean-Drapeau",
@@ -556,20 +556,20 @@ export const parcActivities = [
     },
     photo: {
       url:
-        "http://montreal2.qc.ca/rep_parcs/media/images/application/me_act_glissade_id61.jpg",
+        "http://montreal2.qc.ca/rep_parks/media/images/application/me_act_glissade_id61.jpg",
       alt_fr: "Glissade",
       credit_fr: "Ville de Montréal"
     },
     description_fr:
-      "<p>Plusieurs grands parcs mettent à la disposition des visiteurs une ou deux buttes de glissade.</p>",
+      "<p>Plusieurs grands parks mettent à la disposition des visiteurs une ou deux buttes de glissade.</p>",
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=61",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=61",
     date_creation: "2012-12-04 12:55:20",
     date_modification: "2018-11-27 13:20:14",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "70"
         },
@@ -617,11 +617,11 @@ export const parcActivities = [
       ]
     },
     notes_conseils_fr:
-      '<p><a href="http://ville.montreal.qc.ca/portal/page?_pageid=5798,94913638&amp;_dad=portal&amp;_schema=PORTAL" target="_blank">Pour connaître les conditions des buttes pour la glissade des parcs en arrondissement</a></p>',
+      '<p><a href="http://ville.montreal.qc.ca/portal/page?_pageid=5798,94913638&amp;_dad=portal&amp;_schema=PORTAL" target="_blank">Pour connaître les conditions des buttes pour la glissade des parks en arrondissement</a></p>',
     galerie_photos: [],
     reglements: {
       reglements_intro_fr:
-        "<p><strong>Connaissez-vous les règlements des grands parcs?</strong></p><p>Dans le but d&#039;assurer la protection des ressources naturelles et la sécurité du public, plusieurs règlements sont en vigueur dans les grands parcs. Ces règlements s&#039;appliquent selon qu&#039;il s&#039;agit d&#039;un grand parc relevant de l&#039;agglomération de Montréal ou du conseil municipal de la Ville de Montréal. Quiconque contrevient à ces règlements commet une infraction et est passible d&#039;une amende de 100 $ à 1 000 $.</p>"
+        "<p><strong>Connaissez-vous les règlements des grands parks?</strong></p><p>Dans le but d&#039;assurer la protection des ressources naturelles et la sécurité du public, plusieurs règlements sont en vigueur dans les grands parks. Ces règlements s&#039;appliquent selon qu&#039;il s&#039;agit d&#039;un grand park relevant de l&#039;agglomération de Montréal ou du conseil municipal de la Ville de Montréal. Quiconque contrevient à ces règlements commet une infraction et est passible d&#039;une amende de 100 $ à 1 000 $.</p>"
     }
   },
   {
@@ -634,13 +634,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=362",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=362",
     date_creation: "2018-12-06 11:25:02",
     date_modification: "2018-12-06 11:25:03",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "74"
       },
       nom_fr: "Parc-nature du Cap-Saint-Jacques",
@@ -662,13 +662,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=340",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=340",
     date_creation: "2018-11-14 13:41:11",
     date_modification: "2018-12-11 10:31:59",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "74"
       },
       nom_fr: "Parc-nature du Cap-Saint-Jacques",
@@ -690,13 +690,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=343",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=343",
     date_creation: "2018-11-19 10:18:17",
     date_modification: "2019-01-04 11:29:54",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "74"
       },
       nom_fr: "Parc-nature du Cap-Saint-Jacques",
@@ -718,13 +718,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=363",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=363",
     date_creation: "2018-12-06 11:28:04",
     date_modification: "0000-00-00 00:00:00",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "74"
       },
       nom_fr: "Parc-nature du Cap-Saint-Jacques",
@@ -738,7 +738,7 @@ export const parcActivities = [
   },
   {
     "@id": "353",
-    activite_nom_fr: "Le parc Frédéric-Back décortiqué - Visite inclusive",
+    activite_nom_fr: "Le park Frédéric-Back décortiqué - Visite inclusive",
     categorie: {
       "@id": "32",
       categorie_fr: "Activités éducatives"
@@ -746,13 +746,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=353",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=353",
     date_creation: "2018-11-23 10:46:26",
     date_modification: "2018-11-23 10:46:31",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "86"
       },
       nom_fr: "Parc Frédéric-Back",
@@ -774,13 +774,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=367",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=367",
     date_creation: "2018-12-14 14:59:21",
     date_modification: "2018-12-14 15:12:32",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "74"
       },
       nom_fr: "Parc-nature du Cap-Saint-Jacques",
@@ -802,13 +802,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=345",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=345",
     date_creation: "2018-11-19 14:14:45",
     date_modification: "2018-11-30 15:06:24",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "82"
         },
@@ -838,13 +838,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=192",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=192",
     date_creation: "2017-10-23 12:32:39",
     date_modification: "2018-12-11 15:21:42",
     tarification_fr: "<p>Activité gratuite</p>",
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "75"
         },
@@ -882,13 +882,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=185",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=185",
     date_creation: "2017-10-23 10:32:12",
     date_modification: "2018-11-30 15:07:06",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "75"
       },
       nom_fr: "Parc-nature de l&#039;Île-de-la-Visitation",
@@ -910,13 +910,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=341",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=341",
     date_creation: "2018-11-14 13:53:16",
     date_modification: "2018-11-30 15:07:43",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "74"
       },
       nom_fr: "Parc-nature du Cap-Saint-Jacques",
@@ -938,13 +938,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=179",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=179",
     date_creation: "2017-10-20 13:29:03",
     date_modification: "2018-11-30 15:07:59",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "74"
       },
       nom_fr: "Parc-nature du Cap-Saint-Jacques",
@@ -966,13 +966,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=222",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=222",
     date_creation: "2017-11-27 15:47:36",
     date_modification: "2018-11-30 15:08:20",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "75"
         },
@@ -1010,13 +1010,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=354",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=354",
     date_creation: "2018-11-23 10:50:52",
     date_modification: "0000-00-00 00:00:00",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "86"
       },
       nom_fr: "Parc Frédéric-Back",
@@ -1038,13 +1038,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=360",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=360",
     date_creation: "2018-11-30 11:38:12",
     date_modification: "0000-00-00 00:00:00",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "75"
       },
       nom_fr: "Parc-nature de l&#039;Île-de-la-Visitation",
@@ -1066,13 +1066,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=63",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=63",
     date_creation: "2012-12-04 13:06:00",
     date_modification: "2018-12-11 10:23:11",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "83"
         },
@@ -1138,7 +1138,7 @@ export const parcActivities = [
     galerie_photos: [],
     reglements: {
       reglements_intro_fr:
-        "<p><strong>Connaissez-vous les règlements des grands parcs?</strong></p><p>Dans le but d&#039;assurer la protection des ressources naturelles et la sécurité du public, plusieurs règlements sont en vigueur dans les grands parcs. Ces règlements s&#039;appliquent selon qu&#039;il s&#039;agit d&#039;un grand parc relevant de l&#039;agglomération de Montréal ou du conseil municipal de la Ville de Montréal. Quiconque contrevient à ces règlements commet une infraction et est passible d&#039;une amende de 100 $ à 1 000 $.&nbsp;</p>"
+        "<p><strong>Connaissez-vous les règlements des grands parks?</strong></p><p>Dans le but d&#039;assurer la protection des ressources naturelles et la sécurité du public, plusieurs règlements sont en vigueur dans les grands parks. Ces règlements s&#039;appliquent selon qu&#039;il s&#039;agit d&#039;un grand park relevant de l&#039;agglomération de Montréal ou du conseil municipal de la Ville de Montréal. Quiconque contrevient à ces règlements commet une infraction et est passible d&#039;une amende de 100 $ à 1 000 $.&nbsp;</p>"
     }
   },
   {
@@ -1151,13 +1151,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=72",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=72",
     date_creation: "2012-12-04 17:11:16",
     date_modification: "2018-11-30 11:25:37",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "81"
         },
@@ -1194,7 +1194,7 @@ export const parcActivities = [
     galerie_photos: [],
     reglements: {
       reglements_intro_fr:
-        "<p><strong>Connaissez-vous les règlements des grands parcs?</strong></p><p>Dans le but d&#039;assurer la protection des ressources naturelles et la sécurité du public, plusieurs règlements sont en vigueur dans les grands parcs. Ces règlements s&#039;appliquent selon qu&#039;il s&#039;agit d&#039;un grand parc relevant de l&#039;agglomération de Montréal ou du conseil municipal de la Ville de Montréal. Quiconque contrevient à ces règlements commet une infraction et est passible d&#039;une amende de 100 $ à 1 000 $.&nbsp;</p>"
+        "<p><strong>Connaissez-vous les règlements des grands parks?</strong></p><p>Dans le but d&#039;assurer la protection des ressources naturelles et la sécurité du public, plusieurs règlements sont en vigueur dans les grands parks. Ces règlements s&#039;appliquent selon qu&#039;il s&#039;agit d&#039;un grand park relevant de l&#039;agglomération de Montréal ou du conseil municipal de la Ville de Montréal. Quiconque contrevient à ces règlements commet une infraction et est passible d&#039;une amende de 100 $ à 1 000 $.&nbsp;</p>"
     }
   },
   {
@@ -1207,13 +1207,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=350",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=350",
     date_creation: "2018-11-19 15:46:46",
     date_modification: "2018-11-28 09:30:02",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "83"
         },
@@ -1243,13 +1243,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=352",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=352",
     date_creation: "2018-11-23 10:32:55",
     date_modification: "2018-11-30 15:09:46",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "86"
       },
       nom_fr: "Parc Frédéric-Back",
@@ -1271,13 +1271,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=342",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=342",
     date_creation: "2018-11-14 14:04:11",
     date_modification: "2019-01-18 14:55:21",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "82"
         },
@@ -1308,13 +1308,13 @@ export const parcActivities = [
     description_fr:
       "<p>Vivez des moments uniques lors des soirées en forêt, à pied ou en raquette à la lueur d’une lampe frontale.</p><p>Interprétation ou animation pour la majorité des soirées, ou randonnée autonome à pied, en raquettes ou en ski de fond.</p><p>&nbsp;</p>",
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=213",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=213",
     date_creation: "2017-11-08 11:27:40",
     date_modification: "2018-12-11 14:49:35",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "75"
         },
@@ -1357,13 +1357,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=339",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=339",
     date_creation: "2018-11-14 13:39:19",
     date_modification: "2018-11-14 13:41:41",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "74"
       },
       nom_fr: "Parc-nature du Cap-Saint-Jacques",
@@ -1385,13 +1385,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=347",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=347",
     date_creation: "2018-11-19 15:07:13",
     date_modification: "2018-11-30 15:11:07",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "89"
       },
       nom_fr: "Parc-nature du Bois-de-Saraguay",
@@ -1413,13 +1413,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=106",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=106",
     date_creation: "2016-12-13 10:59:01",
     date_modification: "2018-11-30 09:24:52",
     tarification_fr: "<p>Activité gratuite</p>",
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "70"
         },
@@ -1521,20 +1521,20 @@ export const parcActivities = [
     },
     photo: {
       url:
-        "http://montreal2.qc.ca/rep_parcs/media/images/application/me_act_me_act_raquette_istock_000011150205_large_id91_id65.jpg",
+        "http://montreal2.qc.ca/rep_parks/media/images/application/me_act_me_act_raquette_istock_000011150205_large_id91_id65.jpg",
       alt_fr: "Raquette",
       credit_fr: "Ville de Montréal"
     },
     description_fr:
       "<p>Afin de préserver le milieu naturel sous la neige, la pratique de la raquette se fait dans les sentiers de marche.</p>",
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=65",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=65",
     date_creation: "2012-12-04 13:53:26",
     date_modification: "2018-11-27 12:25:35",
     tarification_fr: "<p>Activité gratuite</p>",
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "70"
         },
@@ -1607,13 +1607,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=366",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=366",
     date_creation: "2018-12-10 15:20:15",
     date_modification: "2018-12-18 08:31:06",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "82"
       },
       nom_fr: "Parc-nature de la Pointe-aux-Prairies",
@@ -1635,13 +1635,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=364",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=364",
     date_creation: "2018-12-06 11:44:30",
     date_modification: "2018-12-18 08:27:06",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "74"
       },
       nom_fr: "Parc-nature du Cap-Saint-Jacques",
@@ -1663,13 +1663,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=348",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=348",
     date_creation: "2018-11-19 15:17:22",
     date_modification: "2018-11-27 14:01:22",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: [
+    parks: {
+      park: [
         {
           "@id": "70"
         },
@@ -1742,13 +1742,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=358",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=358",
     date_creation: "2018-11-28 09:23:44",
     date_modification: "2018-11-30 15:11:30",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "74"
       },
       nom_fr: "Parc-nature du Cap-Saint-Jacques",
@@ -1770,13 +1770,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=351",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=351",
     date_creation: "2018-11-21 15:42:42",
     date_modification: "2019-01-18 14:51:40",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "82"
       },
       nom_fr: "Parc-nature de la Pointe-aux-Prairies",
@@ -1798,13 +1798,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=230",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=230",
     date_creation: "2018-01-11 14:01:30",
     date_modification: "2018-11-21 14:41:35",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "76"
       },
       nom_fr: "Parc Jarry",
@@ -1826,13 +1826,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=221",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=221",
     date_creation: "2017-11-27 15:39:16",
     date_modification: "2018-11-21 15:39:59",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "74"
       },
       nom_fr: "Parc-nature du Cap-Saint-Jacques",
@@ -1854,13 +1854,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=349",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=349",
     date_creation: "2018-11-19 15:26:07",
     date_modification: "2018-11-30 15:12:03",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "76"
       },
       nom_fr: "Parc Jarry",
@@ -1882,13 +1882,13 @@ export const parcActivities = [
     photo: [],
     description_fr: [],
     url_fiche_activite_fr:
-      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parcs_fr/rep_parcs/fiche_activite?id=359",
+      "http://ville.montreal.qc.ca/pls/portal/url/page/grands_parks_fr/rep_parks/fiche_activite?id=359",
     date_creation: "2018-11-29 15:45:18",
     date_modification: "2018-12-06 09:00:22",
     tarification_fr: [],
     info_pratiques_fr: [],
-    parcs: {
-      parc: {
+    parks: {
+      park: {
         "@id": "78"
       },
       nom_fr: "Parc La Fontaine",

@@ -6,4 +6,6 @@ export interface Location {
   address: string;
   phoneNumber: string;
   email?: string;
+  lat?: number;
+  lng?: number;
 }

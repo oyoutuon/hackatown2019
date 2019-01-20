@@ -8,6 +8,7 @@ import {
   SubscriptionActivity
 } from "../../../../common/activity";
 import { Location } from "../../../../common/location";
+import { parkActivities } from "./parks";
 
 export const mockActivities: Activity[] = [];
 const mockPools: Location[] = pools.places.map(pool => {
@@ -49,6 +50,23 @@ mockPools.forEach((pool: Location) => {
       endTime: date.add(Math.floor(Math.random() * 3), "hours").toDate()
     }
   } as PunctualActivity);
+});
+
+export const mockParks: Location[] = []
+
+parkActivities.forEach((parkActivity) => {
+  const parkName: string = (parkActivity.parks.nom_fr instanceof(Array)) ? parkActivity.parks.nom_fr[0] : parkActivity.parks.nom_fr;
+  const coords: string = (parkActivity.parks.coordonnees instanceof(Array)) ? parkActivity.parks.coordonnees[0] : parkActivity.parks.coordonnees;
+  const [lat,lng] = coords.split(",").map(parseFloat)
+
+  mockParks.push({
+    name: parkName,
+    activities: null,
+    lat: lat,
+    lng: lng,
+    address: faker.address.streetAddress(),
+    phoneNumber: faker.phone.phoneNumber()
+  } as Location);
 });
 
 export const mockLocation: Location = {
