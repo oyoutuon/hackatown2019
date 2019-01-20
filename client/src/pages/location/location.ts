@@ -28,7 +28,6 @@ export class LocationPage {
         const { lat, lng } = this.location;
         geocoder.geocode({ location: { lat, lng } }, (results, status) => {
           this.location.address = results[0].formatted_address;
-          console.log(results, status);
         });
       }
 

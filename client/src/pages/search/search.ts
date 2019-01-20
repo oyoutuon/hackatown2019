@@ -28,7 +28,6 @@ export class SearchPage {
   ) {
     this.dataProvider.getActivities().then((data: Activity[]) => {
       this.activities = data;
-      console.log(this.activities);
     });
   }
 
@@ -78,6 +77,5 @@ export class SearchPage {
   }
 
   ionViewDidLoad() {
-    console.log("ionViewDidLoad SearchPage");
   }
 }

@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import { LandingPage } from '../landing/landing';
-import { ActivitiesPage } from '../activities/activities';
-import { ActivityPage } from '../activity/activity';
-import { CreateActivityPage } from '../create-activity/create-activity';
+import { Component } from "@angular/core";
+import { NavController, NavParams } from "ionic-angular";
+import { LandingPage } from "../landing/landing";
+import { ActivitiesPage } from "../activities/activities";
+import { ActivityPage } from "../activity/activity";
+import { CreateActivityPage } from "../create-activity/create-activity";
 
 @Component({
-  selector: 'page-debug',
-  templateUrl: 'debug.html',
+  selector: "page-debug",
+  templateUrl: "debug.html"
 })
 export class DebugPage {
   keys = Object.keys;
@@ -18,11 +18,8 @@ export class DebugPage {
     landing: LandingPage,
     activities: ActivitiesPage,
     activity: ActivityPage,
-    "create-activity": CreateActivityPage,
-  }
+    "create-activity": CreateActivityPage
+  };
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DebugPage');
-  }
-
+  ionViewDidLoad() {}
 }
