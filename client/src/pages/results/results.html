@@ -2,7 +2,7 @@
   <ion-navbar> <ion-title>RESULTS</ion-title> </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding id="content">
   <ion-card *ngFor="let result of results" (click)="onSelect(result)">
     <ion-card-header>
       <ion-card-title color="primary" *ngIf="isSubscription(result)">Subscription</ion-card-title>

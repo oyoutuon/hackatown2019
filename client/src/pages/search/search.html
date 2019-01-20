@@ -15,8 +15,18 @@
     </ion-item>
 
     <ion-item>
-      <ion-label>Price</ion-label>
-      <ion-input type="number" [(ngModel)]="price" name="price"></ion-input>
+      <ion-label>Min Price</ion-label>
+      <ion-input type="number" [(ngModel)]="priceMin" name="priceMin"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Max Price</ion-label>
+      <ion-input type="number" [(ngModel)]="priceMax" name="priceMax"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="date" name="date"></ion-datetime>
     </ion-item>
 
     <ion-item>
