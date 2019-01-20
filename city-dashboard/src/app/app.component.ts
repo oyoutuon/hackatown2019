@@ -8,6 +8,9 @@ import { Activity } from "../../../common/activity";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
+  state = "map";
+  states = ["map", "time", "sport", "type"];
+
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
     responsive: true
@@ -71,5 +74,9 @@ export class AppComponent implements OnInit {
     this.barChartData = Object.values(typeOfActivities);
     this.doughnutChartLabels = Object.keys(sports);
     this.doughnutChartData = Object.values(sports);
+  }
+
+  setState(state) {
+    this.state = state;
   }
 }

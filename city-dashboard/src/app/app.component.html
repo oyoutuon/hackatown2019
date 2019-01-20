@@ -1,7 +1,11 @@
 <h1>Acticity Dashborard | Montreal</h1>
 
-<h2>Type of activities</h2>
-<div style="display: block" *ngIf="barChartData">
+<button class="ui button" *ngFor="let s of states" (click)="setState(s)">
+  {{ s }}
+</button>
+
+<div style="display: block" *ngIf="barChartData && state == 'type'">
+  <h2>Type of activities</h2>
   <canvas
     baseChart
     [data]="barChartData"
@@ -12,8 +16,8 @@
   ></canvas>
 </div>
 
-<h2>Sports</h2>
-<div style="display: block" *ngIf="doughnutChartData">
+<div style="display: block" *ngIf="doughnutChartData && state == 'sport'">
+  <h2>Sports</h2>
   <canvas
     baseChart
     [data]="doughnutChartData"
@@ -22,8 +26,8 @@
   ></canvas>
 </div>
 
-<h2>Busiest times</h2>
-<div style="display: block" *ngIf="lineChartData">
+<div style="display: block" *ngIf="lineChartData && state == 'time'">
+  <h2>Busiest times</h2>
   <canvas
     baseChart
     [data]="lineChartData"
@@ -32,9 +36,15 @@
     [chartType]="lineChartType"
   ></canvas>
 </div>
-<h2>Parks</h2>
+
 <div>
-  <agm-map [zoom]="11" *ngIf="locations" [latitude]="lat" [longitude]="lng">
+  <h2>Parks</h2>
+  <agm-map
+    [zoom]="11"
+    *ngIf="locations && state == 'map'"
+    [latitude]="lat"
+    [longitude]="lng"
+  >
     <div *ngFor="let park of locations">
       <agm-marker *ngIf="park.lat" [latitude]="park.lat" [longitude]="park.lng">
         <agm-info-window>{{ park.name }}</agm-info-window></agm-marker
