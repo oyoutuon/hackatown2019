@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "faker": "^4.1.0",
-    "moment": "^2.23.0"
+    "moment": "^2.23.0",
+    "mongodb": "^3.1.12"
   }
 }
