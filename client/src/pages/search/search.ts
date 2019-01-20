@@ -1,12 +1,9 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
-import {
-  mockActivities,
-  playTypes,
-  trafficTypes
-} from "../../assets/data/mocks";
+import { playTypes, trafficTypes } from "../../assets/data/mocks";
 import { ResultsPage } from "../results/results";
 import { DataProvider } from "../../providers/data/data";
+import { Activity } from "../../../../common/activity";
 
 @Component({
   selector: "page-search",
@@ -15,25 +12,30 @@ import { DataProvider } from "../../providers/data/data";
 export class SearchPage {
   playTypes = playTypes;
   trafficTypes = trafficTypes;
+  activities: Activity[];
 
   sport: string = "";
   location: string = "";
-  price: number;
+  priceMin: number;
+  priceMax: number;
   type: string = "";
   traffic: string = "";
   manager: string = "";
+  date: Date;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public dataProvider: DataProvider
   ) {
-    this.dataProvider.getActivities();
+    this.dataProvider.getActivities().then((data: Activity[]) => {
+      this.activities = data;
+    });
   }
 
   onSubmit($event) {
     let searchFilters = [];
-    let filterResults = mockActivities;
+    let filterResults = this.activities;
     if (this.sport) {
       filterResults = filterResults.filter(
         activity => activity.sport === this.sport
@@ -46,11 +48,19 @@ export class SearchPage {
       );
       searchFilters.push("location");
     }
-    if (this.price !== undefined && this.price !== null) {
+    if (this.priceMin !== undefined && this.priceMin !== null
+      || this.priceMax !== undefined && this.priceMax !== null) {
       filterResults = filterResults.filter(
-        activity => activity.price === this.price
-      );
+        activity =>  {
+          return this.between(activity.price, this.priceMin, this.priceMax);
+      });
       searchFilters.push("price");
+    }
+    if (this.date) {
+      // filterResults = filterResults.filter(
+      //   activity => activity.date === this.date
+      // );
+      searchFilters.push("date");
     }
     if (this.type) {
       filterResults = filterResults.filter(
@@ -77,6 +87,9 @@ export class SearchPage {
   }
 
   ionViewDidLoad() {
-    console.log("ionViewDidLoad SearchPage");
+  }
+
+  between(x: number, min: number, max: number) {
+    return x >= min && x <= max;
   }
 }
