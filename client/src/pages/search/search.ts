@@ -38,13 +38,13 @@ export class SearchPage {
     let filterResults = this.activities;
     if (this.sport) {
       filterResults = filterResults.filter(
-        activity => activity.sport === this.sport
+        activity => activity.sport.toLowerCase().includes(this.sport.toLowerCase())
       );
       searchFilters.push("sport");
     }
     if (this.location) {
       filterResults = filterResults.filter(
-        activity => activity.location.name === this.location
+        activity => activity.location.name.toLowerCase().includes(this.location.toLowerCase())
       );
       searchFilters.push("location");
     }
@@ -76,7 +76,7 @@ export class SearchPage {
     }
     if (this.manager) {
       filterResults = filterResults.filter(
-        activity => activity.manager === this.manager
+        activity => activity.manager.toLowerCase().includes(this.manager.toLowerCase())
       );
       searchFilters.push("manager");
     }
