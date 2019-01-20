@@ -19,12 +19,15 @@ export class DataService {
     if (!this.activities) {
       return this.http
         .get(SERVER_URL + "activities")
-        .subscribe((data: Activity[]) => {
+        .toPromise()
+        .then((data: Activity[]) => {
           this.activities = data;
-          console.log(this.activities);
+          return data;
         });
     } else {
-      return this.activities;
+      return new Promise((res, rej) => {
+        res(this.activities);
+      });
     }
   }
 
@@ -32,12 +35,15 @@ export class DataService {
     if (!this.locations) {
       return this.http
         .get(SERVER_URL + "locations")
-        .subscribe((data: Location[]) => {
+        .toPromise()
+        .then((data: Location[]) => {
           this.locations = data;
-          console.log(this.locations);
+          return data;
         });
     } else {
-      return this.locations;
+      return new Promise((res, rej) => {
+        res(this.locations);
+      });
     }
   }
 }

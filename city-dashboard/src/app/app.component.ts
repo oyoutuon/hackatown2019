@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { DataService } from "./data.service";
 
 @Component({
@@ -6,7 +6,7 @@ import { DataService } from "./data.service";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
     responsive: true
@@ -55,9 +55,13 @@ export class AppComponent {
   public pieChartType = "pie";
   lat = 45.5017;
   lng = -73.5673;
+  locations;
+  activities;
 
-  constructor(public dataProvider: DataService) {
-    this.dataProvider.getActivities();
-    this.dataProvider.getLocations();
+  constructor(public dataProvider: DataService) {}
+
+  async ngOnInit() {
+    this.locations = await this.dataProvider.getActivities();
+    this.activities = await this.dataProvider.getLocations();
   }
 }
