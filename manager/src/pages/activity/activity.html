@@ -15,10 +15,6 @@
 
         <div *ngIf="!isSubscription(activity)">
           <div ion-item><p>Date:</p>{{ activity.time.startTime | date: "fullDate" }}</div>
-          <div ion-item><p>Time:</p>
-            {{ activity.time.startTime | date: "shortTime" }} to
-            {{ activity.time.endTime | date: "shortTime" }}
-          </div>
         </div>
 
         <div *ngIf="isSubscription(activity)">
@@ -41,5 +37,6 @@
         <p>{{ activity.description }}</p>
       </ion-card-content>
     </ion-card>
+    <button margin-left ion-button color="secondary" (click)="onClick()">Return To List</button>
   </ion-content>
   

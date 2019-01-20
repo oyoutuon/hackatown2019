@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { DateRange, Activity, SubscriptionActivity, PunctualActivity } from '../../../../common/activity';
 import { HttpClient } from '@angular/common/http';
+import { ActivityPage } from '../activity/activity';
 
 const SERVER_URL = 'https://hackatown2019-server.herokuapp.com/';
 
@@ -32,6 +33,7 @@ export class CreateActivityPage {
     traffic: '',
     imgUrl: '',
   }
+
   isSubscription: boolean;
   period: DateRange = { startTime: null, endTime: null };
   times: DateRange[] = [];
@@ -82,9 +84,11 @@ export class CreateActivityPage {
 
     this.http.post(SERVER_URL + 'activity', body, { headers: { 'Content-Type': 'application/json' } })
       .toPromise()
-      .then(() => console.log('POST'))
+      .then(() => console.log('POSTED activity'))
       .catch((e) => console.error(e));
+
+    this.navCtrl.push(ActivityPage, { activity: body.activity });
   }
 
-  ionViewDidLoad() { }
+  ionViewDidLoad() {}
 }

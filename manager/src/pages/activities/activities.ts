@@ -17,12 +17,13 @@ export class ActivitiesPage {
     public navParams: NavParams,
     public dataProvider: DataProvider
   ) {
-    this.dataProvider.getActivities().then((data: Activity[]) => {
-      this.activities = data.slice(1,10);
-    });
   }
 
-  ionViewDidLoad() {}
+  ionViewDidLoad() {
+    this.dataProvider.getActivities().then((data: Activity[]) => {
+      this.activities = data.sort((a, b) => a.price - b.price).slice(1,10);
+    });
+  }
 
   createNewActivity() {
     this.navCtrl.push(CreateActivityPage);
