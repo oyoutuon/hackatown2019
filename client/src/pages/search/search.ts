@@ -38,22 +38,22 @@ export class SearchPage {
     let filterResults = this.activities;
     if (this.sport) {
       filterResults = filterResults.filter(
-        activity => activity.sport === this.sport
+        activity => activity.sport.toLowerCase() === this.sport.toLowerCase()
       );
       searchFilters.push("sport");
     }
     if (this.location) {
       filterResults = filterResults.filter(
-        activity => activity.location.name === this.location
+        activity => activity.location.name.toLowerCase() === this.location.toLowerCase()
       );
       searchFilters.push("location");
     }
     if (this.priceMin !== undefined && this.priceMin !== null
       || this.priceMax !== undefined && this.priceMax !== null) {
       filterResults = filterResults.filter(
-        activity =>  {
+        activity => {
           return this.between(activity.price, this.priceMin, this.priceMax);
-      });
+        });
       searchFilters.push("price");
     }
     if (this.date) {
@@ -64,19 +64,19 @@ export class SearchPage {
     }
     if (this.type) {
       filterResults = filterResults.filter(
-        activity => activity.type === this.type
+        activity => activity.type.toLowerCase() === this.type.toLowerCase()
       );
       searchFilters.push("playType");
     }
     if (this.traffic) {
       filterResults = filterResults.filter(
-        activity => activity.traffic === this.traffic
+        activity => activity.traffic.toLocaleLowerCase() === this.traffic.toLowerCase()
       );
       searchFilters.push("trafficType");
     }
     if (this.manager) {
       filterResults = filterResults.filter(
-        activity => activity.manager === this.manager
+        activity => activity.manager.toLowerCase() === this.manager.toLowerCase()
       );
       searchFilters.push("manager");
     }
@@ -84,6 +84,7 @@ export class SearchPage {
       results: filterResults,
       searchFilters: searchFilters
     });
+
   }
 
   ionViewDidLoad() {
