@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 import { Activity, SubscriptionActivity } from "../../../../common/activity";
 import { SubscriptionActivityPage } from "../subscription-activity/subscription-activity";
-import { mockActivities, mockParks } from "../../assets/data/mocks";
+import { mockParks } from "../../assets/data/mocks";
 import { Location } from "../../../../common/location";
 
 @Component({
