@@ -6,7 +6,7 @@
   <ion-card *ngFor="let result of results" (click)="onSelect(result)">
     <ion-card-header>
       <ion-card-title color="primary" *ngIf="isSubscription(result)">Subscription</ion-card-title>
-      <ion-card-title color="danger" *ngIf="!isSubscription(result)">Punctual</ion-card-title>
+      <ion-card-title color="danger" *ngIf="!isSubscription(result)">One Session</ion-card-title>
     </ion-card-header>
     <ion-list>
       <div ion-item><p><ion-icon name="body"></ion-icon>Sport</p> {{ result.sport }}</div>
