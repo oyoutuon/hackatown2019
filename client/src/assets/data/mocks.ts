@@ -6,8 +6,8 @@ import {
   Activity,
   PunctualActivity,
   SubscriptionActivity
-} from "../../../common/activity";
-import { Location } from "../../../common/location";
+} from "../../../../common/activity";
+import { Location } from "../../../../common/location";
 
 export const mockActivities: Activity[] = [];
 const mockPools: Location[] = pools.places.map(pool => {
@@ -45,8 +45,9 @@ mockPools.forEach((pool: Location) => {
     imgUrl: faker.image.fashion(),
     price: faker.finance.amount(),
     time: {
-      startTime: date.toDate(), 
-      endTime: date.add(Math.floor(Math.random() * 3), "hours").toDate() }
+      startTime: date.toDate(),
+      endTime: date.add(Math.floor(Math.random() * 3), "hours").toDate()
+    }
   } as PunctualActivity);
 });
 

@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
-import { Activity, SubscriptionActivity } from "../../../common/activity";
+import { Activity, SubscriptionActivity } from "../../../../common/activity";
 import { SubscriptionActivityPage } from "../subscription-activity/subscription-activity";
 import { mockActivities } from "../../assets/data/mocks";
 

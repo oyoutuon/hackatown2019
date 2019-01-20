@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
-import { PunctualActivity } from "../../../common/activity";
+import { PunctualActivity } from "../../../../common/activity";
 import { mockPunctualActivity } from "../../assets/data/mocks";
 
 @Component({

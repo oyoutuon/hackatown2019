@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
-import { Location } from "../../../common/location";
+import { Location } from "../../../../common/location";
 import { mockLocation, mockLocations } from "../../assets/data/mocks";
 
 @Component({
