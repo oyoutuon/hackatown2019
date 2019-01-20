@@ -16,10 +16,9 @@ export class AppComponent implements OnInit {
     responsive: true
   };
   public barChartLabels: string[];
-  public barChartType = "bar";
-  public barChartLegend = true;
-
   public barChartData: any[];
+  public barChartType = "bar";
+  public barChartLegend = false;
 
   // Doughnut
   public doughnutChartLabels: string[];
