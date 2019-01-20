@@ -9,18 +9,18 @@
       <ion-card-title color="danger" *ngIf="!isSubscription(result)">Punctual</ion-card-title>
     </ion-card-header>
     <ion-list>
-      <div ion-item>Sport: {{ result.sport }}</div>
-      <div ion-item>Location: {{ result.location.name }}</div>
-      <div ion-item>Price: {{ result.price }} $</div>
-      <div ion-item *ngIf="!isSubscription(result)">Time: {{ result.time.startTime | date: "longDate" }}</div>
+      <div ion-item><p>Sport:</p> {{ result.sport }}</div>
+      <div ion-item><p>Location:</p> {{ result.location.name }}</div>
+      <div ion-item><p>Price:</p> {{ result.price }} $</div>
+      <div ion-item *ngIf="!isSubscription(result)"><p>Time:</p> {{ result.time.startTime | date: "longDate" }}</div>
       <div ion-item *ngIf="isSubscription(result)">
-        Period:
+        <p>Period:</p>
         {{ result.period.startTime | date: "longDate" }} to
         {{ result.period.endTime | date: "longDate" }}
       </div>
-      <div ion-item>Type: {{ result.type }}</div>
-      <div ion-item>Traffic: {{ result.traffic }}</div>
-      <div ion-item>Manager: {{ result.manager }}</div>
+      <div ion-item><p>Type:</p> {{ result.type }}</div>
+      <div ion-item><p>Traffic:</p> {{ result.traffic }}</div>
+      <div ion-item><p>Manager:</p> {{ result.manager }}</div>
     </ion-list>
   </ion-card>
 </ion-content>
