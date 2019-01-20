@@ -27,5 +27,7 @@ export class AppComponent {
     { data: [28, 48, 40, 19, 86, 27, 90], label: "Series B" }
   ];
 
+  lat: number = 45.5017;
+  lng: number = -73.5673;
   constructor() {}
 }
