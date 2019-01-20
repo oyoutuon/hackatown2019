@@ -10,7 +10,7 @@
     <img [src]="activity.imgUrl" />
     <ion-list>
       <div ion-item (click)="onClick()">
-        <p><ion-icon name="pin"></ion-icon>Location:</p>
+        <p><ion-icon name="pin"></ion-icon>Location:<ion-icon name="arrow-dropright" padding-left></ion-icon></p>
         {{ activity.location.name }}
       </div>
       <div ion-item>
@@ -47,6 +47,6 @@
       <ion-card-title>Notes</ion-card-title>
       <p>{{ activity.description }}</p>
     </ion-card-content>
-    <div text-center><button small ion-button disabled>register</button></div>
+    <div text-center><button small ion-button disabled>Register</button></div>
   </ion-card>
 </ion-content>

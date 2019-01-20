@@ -5,32 +5,37 @@
 <ion-content padding>
   <form (submit)="onSubmit($event)">
     <ion-item>
-      <ion-label>Sport</ion-label>
+      <ion-label><ion-icon name="body" padding-horizontal></ion-icon>
+        Sport</ion-label>
       <ion-input type="text" [(ngModel)]="sport" name="sport"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label>Location</ion-label>
+      <ion-label><ion-icon name="pin" padding-horizontal></ion-icon>
+        Location</ion-label>
       <ion-input type="text" [(ngModel)]="location" name="location"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label>Min Price</ion-label>
+      <ion-label><ion-icon name="logo-usd" padding-horizontal></ion-icon>
+        Min Price</ion-label>
       <ion-input type="number" [(ngModel)]="priceMin" name="priceMin"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label>Max Price</ion-label>
+      <ion-label><ion-icon name="logo-usd" padding-horizontal></ion-icon>Max Price</ion-label>
       <ion-input type="number" [(ngModel)]="priceMax" name="priceMax"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label>Date</ion-label>
+      <ion-label><ion-icon name="calendar" padding-horizontal></ion-icon>
+        Date</ion-label>
       <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="date" name="date"></ion-datetime>
     </ion-item>
 
     <ion-item>
-      <ion-label>Type</ion-label>
+      <ion-label><ion-icon name="checkmark-circle" padding-horizontal></ion-icon>
+        Type</ion-label>
       <ion-select [(ngModel)]="type" name="type">
         <ion-option *ngFor="let playType of playTypes" [value]="playType">{{
           playType
@@ -39,7 +44,8 @@
     </ion-item>
 
     <ion-item>
-      <ion-label>Traffic</ion-label>
+      <ion-label><ion-icon name="people" padding-horizontal></ion-icon>
+        Traffic</ion-label>
       <ion-select [(ngModel)]="traffic" name="traffic">
         <ion-option
           *ngFor="let trafficType of trafficTypes"
@@ -50,7 +56,8 @@
     </ion-item>
 
     <ion-item>
-      <ion-label>Manager</ion-label>
+      <ion-label><ion-icon name="contact" padding-horizontal></ion-icon>
+        Manager</ion-label>
       <ion-input type="text" [(ngModel)]="manager" name="manager"></ion-input>
     </ion-item>
 
