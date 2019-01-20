@@ -12,6 +12,23 @@
   </div>
 </div>
 
+<div style="display: block">
+  <canvas
+    baseChart
+    [data]="doughnutChartData"
+    [labels]="doughnutChartLabels"
+    [chartType]="doughnutChartType"
+  ></canvas>
+</div>
+<div style="display: block">
+  <canvas
+    baseChart
+    [data]="lineChartData"
+    [labels]="lineChartLabels"
+    [options]="lineChartOptions"
+    [chartType]="lineChartType"
+  ></canvas>
+</div>
 <div><agm-map [latitude]="lat" [longitude]="lng"></agm-map></div>
 
 <router-outlet></router-outlet>

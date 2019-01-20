@@ -27,6 +27,31 @@ export class AppComponent {
     { data: [28, 48, 40, 19, 86, 27, 90], label: "Series B" }
   ];
 
+  // Doughnut
+  public doughnutChartLabels: string[] = [
+    "Download Sales",
+    "In-Store Sales",
+    "Mail-Order Sales"
+  ];
+  public doughnutChartData: number[] = [350, 450, 100];
+  public doughnutChartType: string = "doughnut";
+
+  // lineChart
+  public lineChartData: Array<any> = [
+    [65, 59, 80, 81, 56, 55, 40],
+    [28, 48, 40, 19, 86, 27, 90]
+  ];
+  public lineChartLabels: Array<any> = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July"
+  ];
+  public lineChartType: string = "line";
+  public pieChartType: string = "pie";
   lat: number = 45.5017;
   lng: number = -73.5673;
   constructor() {}
