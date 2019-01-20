@@ -4,6 +4,7 @@ import { Activity, SubscriptionActivity } from "../../../../common/activity";
 import { SubscriptionActivityPage } from "../subscription-activity/subscription-activity";
 import { mockParks } from "../../assets/data/mocks";
 import { Location } from "../../../../common/location";
+import { PunctualActivityPage } from "../punctual-activity/punctual-activity";
 
 @Component({
   selector: "page-results",
@@ -14,15 +15,14 @@ export class ResultsPage {
 
   parks: Location[] = mockParks;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log(this.results);
     this.results = this.navParams.get('results');
   }
 
   ionViewDidLoad() {}
 
   onSelect(result: Activity) {
-    const page = SubscriptionActivityPage;
-    this.navCtrl.push(page);
+    const page = this.isSubscription(result) ? SubscriptionActivityPage : PunctualActivityPage;
+    this.navCtrl.push(page, {activity: result});
   }
 
   isSubscription(result: any): result is SubscriptionActivity {
