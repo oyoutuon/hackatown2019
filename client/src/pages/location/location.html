@@ -17,15 +17,18 @@
     </div>
     <ion-list>
       <div ion-item>
-        <p>Address:</p>
+        <p>
+          <ion-avatar item-start> <img [src]="fakeAvatar" /> </ion-avatar>
+          Address:
+        </p>
         {{ location.address }}
       </div>
       <div ion-item>
-        <p>Email:</p>
+        <p><ion-icon name="mail"></ion-icon>Email:</p>
         {{ location.email }}
       </div>
       <div ion-item>
-        <p>Phone Number:</p>
+        <p><ion-icon name="call"></ion-icon>Phone Number:</p>
         {{ location.phoneNumber }}
       </div>
     </ion-list>
