@@ -2,16 +2,18 @@ import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 import { Activity, SubscriptionActivity } from "../../../common/activity";
 import { SubscriptionActivityPage } from "../subscription-activity/subscription-activity";
-import { mockAvtivities } from "../../assets/data/mocks";
+import { mockActivities } from "../../assets/data/mocks";
 
 @Component({
   selector: "page-results",
   templateUrl: "results.html"
 })
 export class ResultsPage {
-  results: Activity[] = mockAvtivities;
+  results: Activity[] = mockActivities;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    console.log(this.results);
+  }
 
   ionViewDidLoad() {}
 

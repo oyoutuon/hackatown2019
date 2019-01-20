@@ -10,6 +10,7 @@ import {
 } from "../../../common/activity";
 import { Location } from "../../../common/location";
 
+export const mockActivities: Activity[] = [];
 const mockPools: Location[] = pools.places.map(pool => {
   const p = {
     address: pool.properties.ADRESSE,
@@ -22,12 +23,29 @@ const mockPools: Location[] = pools.places.map(pool => {
   return p;
 });
 
+const poolActivities = [
+  "free swimming",
+  "children's pool",
+  "waterpolo",
+  "synchronized swimming",
+  "free diving",
+  "racing"
+];
+
+const trafficTypes = ["Usually empty", "Some waiting time", "Very busy"];
+
 mockPools.forEach((pool: Location) => {
-  // bain libre
-  // pateaugoire libre
-  // waterpolo
-  // synchronizedswimming
-  // race
+  mockActivities.push({
+    description: faker.lorem.paragraph(),
+    sport: poolActivities[Math.floor(Math.random() * poolActivities.length)],
+    location: pool,
+    type: Math.random() < 0.5 ? "class" : "free",
+    manager: faker.name.firstName() + " " + faker.name.lastName(),
+    traffic: trafficTypes[Math.floor(Math.random() * trafficTypes.length)],
+    imgUrl: faker.image.fashion(),
+    price: faker.finance.amount(),
+    time: { startTime: null, endTime: null }
+  } as PunctualActivity);
 });
 
 export const mockLocation: Location = {
@@ -38,7 +56,7 @@ export const mockLocation: Location = {
   email: "marcus.phan@polymtl.ca"
 };
 
-export const mockPunctualActivty: PunctualActivity = {
+export const mockPunctualActivity: PunctualActivity = {
   sport: "Basukettuboru",
   location: mockLocation,
   price: 5,
@@ -59,7 +77,7 @@ export const mockPunctualActivty: PunctualActivity = {
   imgUrl: faker.image.sports()
 };
 
-export const mockSubscriptionActivty: SubscriptionActivity = {
+export const mockSubscriptionActivity: SubscriptionActivity = {
   sport: "Socceru",
   location: mockLocation,
   price: 115,
@@ -82,7 +100,4 @@ export const mockSubscriptionActivty: SubscriptionActivity = {
 };
 
 export const mockLocations: Location[] = [mockLocation, ...mockPools];
-export const mockAvtivities: Activity[] = [
-  mockPunctualActivty,
-  mockSubscriptionActivty
-];
+mockActivities.push(mockPunctualActivity, mockSubscriptionActivity);
