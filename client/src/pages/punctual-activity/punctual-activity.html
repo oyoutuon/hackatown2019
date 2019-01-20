@@ -10,11 +10,11 @@
     <img [src]="activity.imgUrl" />
     <ion-list>
       <div ion-item (click)="onClick()">
-        <p><ion-icon name="pin"></ion-icon>Location:<ion-icon name="arrow-dropright" padding-left></ion-icon></p>
+        <p><ion-icon name="pin"></ion-icon>Location</p>
         {{ activity.location.name }}
       </div>
       <div ion-item>
-        <p><ion-icon name="checkmark-circle"></ion-icon>Type:</p>
+        <p><ion-icon name="checkmark-circle"></ion-icon>Type</p>
         {{ activity.type }}
       </div>
       <div ion-item>
@@ -25,11 +25,11 @@
         {{ activity.price }} $
       </div>
       <div ion-item>
-        <p><ion-icon name="calendar"></ion-icon> Date:</p>
+        <p><ion-icon name="calendar"></ion-icon> Date</p>
         {{ activity.time.startTime | date: "longDate" }}
       </div>
       <div ion-item>
-        <p><ion-icon name="calendar"></ion-icon>Time:</p>
+        <p><ion-icon name="calendar"></ion-icon>Time</p>
         {{ activity.time.startTime | date: "shortTime" }} to
         {{ activity.time.endTime | date: "shortTime" }}
       </div>
@@ -39,7 +39,7 @@
       </div>
       <div ion-item>
         <ion-avatar item-start> <img [src]="fakeAvatar" /> </ion-avatar>
-        <p>Person in charge:</p>
+        <p>Person in charge</p>
         {{ activity.manager }}
       </div>
     </ion-list>
