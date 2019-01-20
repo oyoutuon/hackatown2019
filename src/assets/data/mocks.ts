@@ -1,5 +1,7 @@
 import faker from "faker";
 import moment from "moment";
+// import { parseString } from "xml2js";
+
 import { pools } from "./pools";
 import {
   Activity,
@@ -14,10 +16,18 @@ const mockPools: Location[] = pools.places.map(pool => {
     name: pool.properties.NOM,
     email: faker.internet.email(),
     activities: [],
-    phoneNumber: faker.phone.phoneNumber
+    phoneNumber: faker.phone.phoneNumber()
   } as Location;
 
   return p;
+});
+
+mockPools.forEach((pool: Location) => {
+  // bain libre
+  // pateaugoire libre
+  // waterpolo
+  // synchronizedswimming
+  // race
 });
 
 export const mockLocation: Location = {

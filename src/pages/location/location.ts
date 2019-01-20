@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 import { Location } from "../../../common/location";
-import { mockLocation } from "../../assets/data/mocks";
+import { mockLocation, mockLocations } from "../../assets/data/mocks";
 
 @Component({
   selector: "page-location",
@@ -14,5 +14,7 @@ export class LocationPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
-  ionViewDidLoad() {}
+  ionViewDidLoad() {
+    console.log(mockLocations);
+  }
 }
