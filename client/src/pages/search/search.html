@@ -33,14 +33,14 @@
         <ion-item>
           <ion-label>Type</ion-label>
           <ion-select [(ngModel)]="type" name="type">
-            <ion-option *ngFor="let mockType of mockTypes" [value]="mockType">{{ mockType }}</ion-option>
+            <ion-option *ngFor="let playType of playTypes" [value]="playType">{{ playType }}</ion-option>
           </ion-select>
         </ion-item>
 
         <ion-item>
           <ion-label>Traffic</ion-label>
           <ion-select [(ngModel)]="traffic" name="traffic">
-            <ion-option *ngFor="let mockTraffic of mockTraffics" [value]="mockTraffic">{{ mockTraffic }}</ion-option>
+            <ion-option *ngFor="let trafficType of trafficTypes" [value]="trafficType">{{ trafficType }}</ion-option>
           </ion-select>
         </ion-item>
 

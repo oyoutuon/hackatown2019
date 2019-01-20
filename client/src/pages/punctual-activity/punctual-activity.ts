@@ -1,17 +1,21 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 import { PunctualActivity } from "../../../../common/activity";
-import { mockPunctualActivity } from "../../assets/data/mocks";
+import { LocationPage } from "../location/location";
 
 @Component({
   selector: "page-punctual-activity",
   templateUrl: "punctual-activity.html"
 })
 export class PunctualActivityPage {
-  activity: PunctualActivity = mockPunctualActivity;
+  activity: PunctualActivity;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log(this.activity);
+    this.activity = this.navParams.get('activity');
+  }
+
+  onClick() {
+    this.navCtrl.push(LocationPage, {location: this.activity.location});
   }
 
   ionViewDidLoad() {

@@ -2,7 +2,6 @@ import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 import { Location } from "../../../../common/location";
 import { HttpClient } from "@angular/common/http";
-import { mockLocation } from "../../assets/data/mocks";
 import { MapsAPILoader } from "@agm/core";
 
 const GEOCODING_URL = "https://maps.googleapis.com/maps/api/geocode/json";
@@ -19,7 +18,7 @@ export class LocationPage {
     public http: HttpClient,
     public mapsAPILoader: MapsAPILoader
   ) {
-    this.location = this.navParams.get("location") || mockLocation;
+    this.location = this.navParams.get("location");
   }
 
   ionViewDidLoad() {

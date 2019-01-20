@@ -12,10 +12,12 @@ import { PunctualActivityPage } from "../punctual-activity/punctual-activity";
 })
 export class ResultsPage {
   results: Activity[];
+  searchFilters: string[];
 
   parks: Location[] = mockParks;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.results = this.navParams.get('results');
+    this.searchFilters = this.navParams.get('searchFilters');
   }
 
   ionViewDidLoad() {}

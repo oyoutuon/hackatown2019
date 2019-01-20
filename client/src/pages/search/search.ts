@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { mockActivities } from '../../assets/data/mocks';
+import { mockActivities, playTypes, trafficTypes } from '../../assets/data/mocks';
 import { ResultsPage } from '../results/results';
 
 /**
@@ -15,18 +15,9 @@ import { ResultsPage } from '../results/results';
   templateUrl: 'search.html',
 })
 export class SearchPage {
-  mockTypes = [
-    'Freeplay',
-    'Beginner Course',
-    'Intermediate Course',
-    'Advanced Course'
-  ]
 
-  mockTraffics = [
-    'Usually Empty',
-    'Some Waiting Time',
-    'Very Busy'
-  ]
+  playTypes = playTypes;
+  trafficTypes = trafficTypes;
 
   sport: string = '';
   location: string = '';
@@ -39,26 +30,33 @@ export class SearchPage {
   }
 
   onSubmit($event) {
+    let searchFilters = [];
     let filterResults = mockActivities;
     if (this.sport) {
       filterResults = filterResults.filter(activity => activity.sport === this.sport);
+      searchFilters.push('sport');
     } 
     if (this.location) {
       filterResults = filterResults.filter(activity => activity.location.name === this.location);
+      searchFilters.push('location');
     }
     if (this.price !== undefined && this.price !== null) {
       filterResults = filterResults.filter(activity => activity.price === this.price);
+      searchFilters.push('price');
     }
     if (this.type) {
       filterResults = filterResults.filter(activity => activity.type === this.type);
+      searchFilters.push('playType');
     }
     if (this.traffic) {
       filterResults = filterResults.filter(activity => activity.traffic === this.traffic);
+      searchFilters.push('trafficType');
     }
     if (this.manager) {
       filterResults = filterResults.filter(activity => activity.manager === this.manager);
+      searchFilters.push('manager');
     }
-    this.navCtrl.push(ResultsPage, {results: filterResults});
+    this.navCtrl.push(ResultsPage, {results: filterResults, searchFilters: searchFilters});
   }
 
   ionViewDidLoad() {

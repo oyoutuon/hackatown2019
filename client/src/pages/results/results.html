@@ -11,16 +11,16 @@
     <ion-list>
       <div ion-item><p>Sport:</p> {{ result.sport }}</div>
       <div ion-item><p>Location:</p> {{ result.location.name }}</div>
-      <div ion-item><p>Price:</p> {{ result.price }} $</div>
+      <div ion-item *ngIf="searchFilters.indexOf('price') > -1"><p>Price:</p> {{ result.price }} $</div>
       <div ion-item *ngIf="!isSubscription(result)"><p>Time:</p> {{ result.time.startTime | date: "longDate" }}</div>
       <div ion-item *ngIf="isSubscription(result)">
         <p>Period:</p>
         {{ result.period.startTime | date: "longDate" }} to
         {{ result.period.endTime | date: "longDate" }}
       </div>
-      <div ion-item><p>Type:</p> {{ result.type }}</div>
-      <div ion-item><p>Traffic:</p> {{ result.traffic }}</div>
-      <div ion-item><p>Manager:</p> {{ result.manager }}</div>
+      <div ion-item *ngIf="searchFilters.indexOf('playType') > -1"><p>Type:</p> {{ result.type }}</div>
+      <div ion-item *ngIf="searchFilters.indexOf('trafficType') > -1"><p>Traffic:</p> {{ result.traffic }}</div>
+      <div ion-item *ngIf="searchFilters.indexOf('manager') > -1"><p>Manager:</p> {{ result.manager }}</div>
     </ion-list>
   </ion-card>
 </ion-content>
