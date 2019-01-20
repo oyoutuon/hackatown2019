@@ -1,18 +1,19 @@
 <h1>Acticity Dashborard | Montreal</h1>
-<div>
-  <div style="display: block">
-    <canvas
-      baseChart
-      [datasets]="barChartData"
-      [labels]="barChartLabels"
-      [options]="barChartOptions"
-      [legend]="barChartLegend"
-      [chartType]="barChartType"
-    ></canvas>
-  </div>
+
+<h2>Type of activities</h2>
+<div style="display: block" *ngIf="barChartData">
+  <canvas
+    baseChart
+    [data]="barChartData"
+    [labels]="barChartLabels"
+    [options]="barChartOptions"
+    [legend]="barChartLegend"
+    [chartType]="barChartType"
+  ></canvas>
 </div>
 
-<div style="display: block">
+<h2>Sports</h2>
+<div style="display: block" *ngIf="doughnutChartData">
   <canvas
     baseChart
     [data]="doughnutChartData"
@@ -20,7 +21,9 @@
     [chartType]="doughnutChartType"
   ></canvas>
 </div>
-<div style="display: block">
+
+<h2>Busiest times</h2>
+<div style="display: block" *ngIf="lineChartData">
   <canvas
     baseChart
     [data]="lineChartData"
@@ -29,6 +32,15 @@
     [chartType]="lineChartType"
   ></canvas>
 </div>
-<div><agm-map [latitude]="lat" [longitude]="lng"></agm-map></div>
+<h2>Parks</h2>
+<div>
+  <agm-map [zoom]="11" *ngIf="locations" [latitude]="lat" [longitude]="lng">
+    <div *ngFor="let park of locations">
+      <agm-marker *ngIf="park.lat" [latitude]="park.lat" [longitude]="park.lng">
+        <agm-info-window>{{ park.name }}</agm-info-window></agm-marker
+      >
+    </div>
+  </agm-map>
+</div>
 
 <router-outlet></router-outlet>

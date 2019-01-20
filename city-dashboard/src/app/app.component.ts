@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "./data.service";
+import { Activity } from "../../../common/activity";
 
 @Component({
   selector: "app-root",
@@ -11,30 +12,15 @@ export class AppComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public barChartLabels: string[] = [
-    "2006",
-    "2007",
-    "2008",
-    "2009",
-    "2010",
-    "2011",
-    "2012"
-  ];
+  public barChartLabels: string[];
   public barChartType = "bar";
   public barChartLegend = true;
 
-  public barChartData: any[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: "Series A" },
-    { data: [28, 48, 40, 19, 86, 27, 90], label: "Series B" }
-  ];
+  public barChartData: any[];
 
   // Doughnut
-  public doughnutChartLabels: string[] = [
-    "Download Sales",
-    "In-Store Sales",
-    "Mail-Order Sales"
-  ];
-  public doughnutChartData: number[] = [350, 450, 100];
+  public doughnutChartLabels: string[];
+  public doughnutChartData: number[];
   public doughnutChartType = "doughnut";
 
   // lineChart
@@ -51,8 +37,10 @@ export class AppComponent implements OnInit {
     "June",
     "July"
   ];
+
   public lineChartType = "line";
   public pieChartType = "pie";
+
   lat = 45.5017;
   lng = -73.5673;
   locations;
@@ -61,7 +49,27 @@ export class AppComponent implements OnInit {
   constructor(public dataProvider: DataService) {}
 
   async ngOnInit() {
-    this.locations = await this.dataProvider.getActivities();
-    this.activities = await this.dataProvider.getLocations();
+    this.activities = await this.dataProvider.getActivities();
+    this.locations = await this.dataProvider.getLocations();
+    const sports = {};
+    const typeOfActivities = {};
+    this.activities.forEach((activity: Activity) => {
+      if (activity.sport in sports) {
+        sports[activity.sport] += 1;
+      } else {
+        sports[activity.sport] = 1;
+      }
+
+      if (activity.type in typeOfActivities) {
+        typeOfActivities[activity.type] += 1;
+      } else {
+        typeOfActivities[activity.type] = 1;
+      }
+    });
+
+    this.barChartLabels = Object.keys(typeOfActivities);
+    this.barChartData = Object.values(typeOfActivities);
+    this.doughnutChartLabels = Object.keys(sports);
+    this.doughnutChartData = Object.values(sports);
   }
 }
