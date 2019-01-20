@@ -1,54 +1,49 @@
-<!--
-  Generated template for the SearchPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>SEARCH</ion-title>
-  </ion-navbar>
-
+  <ion-navbar> <ion-title>SEARCH</ion-title> </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
-    <form (submit)="onSubmit($event)">
-        <ion-item>
-          <ion-label>Sport</ion-label>
-          <ion-input type="text" [(ngModel)]="sport" name="sport"></ion-input>
-        </ion-item>
+  <form (submit)="onSubmit($event)">
+    <ion-item>
+      <ion-label>Sport</ion-label>
+      <ion-input type="text" [(ngModel)]="sport" name="sport"></ion-input>
+    </ion-item>
 
-        <ion-item>
-          <ion-label>Location</ion-label>
-          <ion-input type="text" [(ngModel)]="location" name="location"></ion-input>
-        </ion-item>
+    <ion-item>
+      <ion-label>Location</ion-label>
+      <ion-input type="text" [(ngModel)]="location" name="location"></ion-input>
+    </ion-item>
 
-        <ion-item>
-          <ion-label>Price</ion-label>
-          <ion-input type="number" [(ngModel)]="price" name="price"></ion-input>
-        </ion-item>
+    <ion-item>
+      <ion-label>Price</ion-label>
+      <ion-input type="number" [(ngModel)]="price" name="price"></ion-input>
+    </ion-item>
 
-        <ion-item>
-          <ion-label>Type</ion-label>
-          <ion-select [(ngModel)]="type" name="type">
-            <ion-option *ngFor="let playType of playTypes" [value]="playType">{{ playType }}</ion-option>
-          </ion-select>
-        </ion-item>
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-select [(ngModel)]="type" name="type">
+        <ion-option *ngFor="let playType of playTypes" [value]="playType">{{
+          playType
+        }}</ion-option>
+      </ion-select>
+    </ion-item>
 
-        <ion-item>
-          <ion-label>Traffic</ion-label>
-          <ion-select [(ngModel)]="traffic" name="traffic">
-            <ion-option *ngFor="let trafficType of trafficTypes" [value]="trafficType">{{ trafficType }}</ion-option>
-          </ion-select>
-        </ion-item>
+    <ion-item>
+      <ion-label>Traffic</ion-label>
+      <ion-select [(ngModel)]="traffic" name="traffic">
+        <ion-option
+          *ngFor="let trafficType of trafficTypes"
+          [value]="trafficType"
+          >{{ trafficType }}</ion-option
+        >
+      </ion-select>
+    </ion-item>
 
-        <ion-item>
-          <ion-label>Manager</ion-label>
-          <ion-input type="text" [(ngModel)]="manager" name="manager"></ion-input>
-        </ion-item>
+    <ion-item>
+      <ion-label>Manager</ion-label>
+      <ion-input type="text" [(ngModel)]="manager" name="manager"></ion-input>
+    </ion-item>
 
-        <button ion-button type="submit" block>Search</button>
-      </form>
+    <button ion-button type="submit" block>Search</button>
+  </form>
 </ion-content>

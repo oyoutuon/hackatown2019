@@ -1,12 +1,9 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
-import {
-  mockActivities,
-  playTypes,
-  trafficTypes
-} from "../../assets/data/mocks";
+import { playTypes, trafficTypes } from "../../assets/data/mocks";
 import { ResultsPage } from "../results/results";
 import { DataProvider } from "../../providers/data/data";
+import { Activity } from "../../../../common/activity";
 
 @Component({
   selector: "page-search",
@@ -15,6 +12,7 @@ import { DataProvider } from "../../providers/data/data";
 export class SearchPage {
   playTypes = playTypes;
   trafficTypes = trafficTypes;
+  activities: Activity[];
 
   sport: string = "";
   location: string = "";
@@ -28,12 +26,15 @@ export class SearchPage {
     public navParams: NavParams,
     public dataProvider: DataProvider
   ) {
-    this.dataProvider.getActivities();
+    this.dataProvider.getActivities().then((data: Activity[]) => {
+      this.activities = data;
+      console.log(this.activities);
+    });
   }
 
   onSubmit($event) {
     let searchFilters = [];
-    let filterResults = mockActivities;
+    let filterResults = this.activities;
     if (this.sport) {
       filterResults = filterResults.filter(
         activity => activity.sport === this.sport
