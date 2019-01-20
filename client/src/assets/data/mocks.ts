@@ -32,32 +32,45 @@ const poolActivities = [
   "racing"
 ];
 
+const parkSports = [
+  "tennis",
+  "basketball",
+  "soccer",
+  "baseball",
+  "volleyball",
+  "pingpong",
+  "bocce",
+  "football"
+]
+
 const trafficTypes = ["Usually empty", "Some waiting time", "Very busy"];
 
 mockPools.forEach((pool: Location) => {
-  const date = moment().add(Math.floor(Math.random() * 30), "days");
-  mockActivities.push({
-    description: faker.lorem.paragraph(),
-    sport: poolActivities[Math.floor(Math.random() * poolActivities.length)],
-    location: pool,
-    type: Math.random() < 0.5 ? "class" : "free",
-    manager: faker.name.firstName() + " " + faker.name.lastName(),
-    traffic: trafficTypes[Math.floor(Math.random() * trafficTypes.length)],
-    imgUrl: faker.image.fashion(),
-    price: faker.finance.amount(),
-    time: {
-      startTime: date.toDate(),
-      endTime: date.add(Math.floor(Math.random() * 3), "hours").toDate()
-    }
-  } as PunctualActivity);
+  if (Math.random() > 0.8) {
+    const date = moment().add(Math.floor(Math.random() * 30), "days");
+    mockActivities.push({
+      description: faker.lorem.paragraph(),
+      sport: poolActivities[Math.floor(Math.random() * poolActivities.length)],
+      location: pool,
+      type: Math.random() < 0.5 ? "class" : "free",
+      manager: faker.name.firstName() + " " + faker.name.lastName(),
+      traffic: trafficTypes[Math.floor(Math.random() * trafficTypes.length)],
+      imgUrl: faker.image.fashion(),
+      price: faker.finance.amount(),
+      time: {
+        startTime: date.toDate(),
+        endTime: date.add(Math.floor(Math.random() * 3), "hours").toDate()
+      }
+    } as PunctualActivity);
+  }
 });
 
 export const mockParks: Location[] = []
 
 parkActivities.forEach((parkActivity) => {
-  const parkName: string = (parkActivity.parks.nom_fr instanceof(Array)) ? parkActivity.parks.nom_fr[0] : parkActivity.parks.nom_fr;
-  const coords: string = (parkActivity.parks.coordonnees instanceof(Array)) ? parkActivity.parks.coordonnees[0] : parkActivity.parks.coordonnees;
-  const [lat,lng] = coords.split(",").map(parseFloat)
+  const parkName: string = (parkActivity.parks.nom_fr instanceof (Array)) ? parkActivity.parks.nom_fr[0] : parkActivity.parks.nom_fr;
+  const coords: string = (parkActivity.parks.coordonnees instanceof (Array)) ? parkActivity.parks.coordonnees[0] : parkActivity.parks.coordonnees;
+  const [lat, lng] = coords.split(",").map(parseFloat)
 
   mockParks.push({
     name: parkName,
@@ -68,6 +81,24 @@ parkActivities.forEach((parkActivity) => {
     phoneNumber: faker.phone.phoneNumber()
   } as Location);
 });
+
+mockParks.forEach((park: Location) => {
+  const date = moment().add(Math.floor(Math.random() * 30), "days");
+  mockActivities.push({
+    description: faker.lorem.paragraph(),
+    imgUrl: faker.image.image(),
+    location: park,
+    manager: faker.name.firstName() + " " + faker.name.lastName(),
+    price: faker.finance.amount(),
+    sport: parkSports[Math.floor(Math.random() * parkSports.length)],
+    time: {
+      startTime: date.toDate(),
+      endTime: date.add(Math.floor(Math.random() * 3), "hours").toDate()
+    },
+    traffic: trafficTypes[Math.floor(Math.random() * trafficTypes.length)],
+    type: Math.random() < 0.5 ? "class" : "free"
+  } as PunctualActivity)
+})
 
 export const mockLocation: Location = {
   activities: [],
