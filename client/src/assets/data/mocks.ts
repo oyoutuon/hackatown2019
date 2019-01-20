@@ -41,7 +41,7 @@ const parkSports = [
   "pingpong",
   "bocce",
   "football"
-]
+];
 
 const trafficTypes = ["Usually empty", "Some waiting time", "Very busy"];
 
@@ -65,12 +65,18 @@ mockPools.forEach((pool: Location) => {
   }
 });
 
-export const mockParks: Location[] = []
+export const mockParks: Location[] = [];
 
-parkActivities.forEach((parkActivity) => {
-  const parkName: string = (parkActivity.parks.nom_fr instanceof (Array)) ? parkActivity.parks.nom_fr[0] : parkActivity.parks.nom_fr;
-  const coords: string = (parkActivity.parks.coordonnees instanceof (Array)) ? parkActivity.parks.coordonnees[0] : parkActivity.parks.coordonnees;
-  const [lat, lng] = coords.split(",").map(parseFloat)
+parkActivities.forEach(parkActivity => {
+  const parkName: string =
+    parkActivity.parks.nom_fr instanceof Array
+      ? parkActivity.parks.nom_fr[0]
+      : parkActivity.parks.nom_fr;
+  const coords: string =
+    parkActivity.parks.coordonnees instanceof Array
+      ? parkActivity.parks.coordonnees[0]
+      : parkActivity.parks.coordonnees;
+  const [lat, lng] = coords.split(",").map(parseFloat);
 
   mockParks.push({
     name: parkName,
@@ -97,13 +103,13 @@ mockParks.forEach((park: Location) => {
     },
     traffic: trafficTypes[Math.floor(Math.random() * trafficTypes.length)],
     type: Math.random() < 0.5 ? "class" : "free"
-  } as PunctualActivity)
-})
+  } as PunctualActivity);
+});
 
 export const mockLocation: Location = {
   activities: [],
   name: "Chez marcus",
-  address: "environ",
+  address: "8827 rue d'arras",
   phoneNumber: "+1 514 322 4221",
   email: "marcus.phan@polymtl.ca"
 };

@@ -3,24 +3,38 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card> 
+  <ion-card *ngIf="location">
     <ion-card-header>
       <ion-card-title> {{ location.name }} </ion-card-title>
     </ion-card-header>
     <div padding>
-      <agm-map [latitude]="lat" [longitude]="lng">
-      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      <agm-map [latitude]="location.lat" [longitude]="location.lng">
+        <agm-marker
+          [latitude]="location.lat"
+          [longitude]="location.lng"
+        ></agm-marker>
       </agm-map>
     </div>
     <ion-list>
-      <div ion-item><p>Address:</p>{{ location.address }}</div>
-      <div ion-item><p>Email:</p>{{ location.email }}</div>
-      <div ion-item><p>Phone Number:</p>{{ location.phoneNumber }}</div>
+      <div ion-item>
+        <p>Address:</p>
+        {{ location.address }}
+      </div>
+      <div ion-item>
+        <p>Email:</p>
+        {{ location.email }}
+      </div>
+      <div ion-item>
+        <p>Phone Number:</p>
+        {{ location.phoneNumber }}
+      </div>
     </ion-list>
     <ion-card-content>
       <ion-card-title>Activities</ion-card-title>
       <ion-list>
-        <div *ngFor="let activity of location.activities"><div ion-item>{{ activity.sport }}</div></div>
+        <div *ngFor="let activity of location.activities">
+          <div ion-item>{{ activity.sport }}</div>
+        </div>
       </ion-list>
     </ion-card-content>
   </ion-card>
