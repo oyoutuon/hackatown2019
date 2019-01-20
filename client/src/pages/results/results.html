@@ -9,18 +9,18 @@
       <ion-card-title color="danger" *ngIf="!isSubscription(result)">Punctual</ion-card-title>
     </ion-card-header>
     <ion-list>
-      <div ion-item><p>Sport:</p> {{ result.sport }}</div>
-      <div ion-item><p>Location:</p> {{ result.location.name }}</div>
-      <div ion-item *ngIf="searchFilters.indexOf('price') > -1"><p>Price:</p> {{ result.price }} $</div>
-      <div ion-item *ngIf="!isSubscription(result)"><p>Time:</p> {{ result.time.startTime | date: "longDate" }}</div>
+      <div ion-item><p><ion-icon name="body"></ion-icon>Sport</p> {{ result.sport }}</div>
+      <div ion-item><p><ion-icon name="pin"></ion-icon>Location</p> {{ result.location.name }}</div>
+      <div ion-item *ngIf="searchFilters.indexOf('price') > -1"><p><ion-icon name="logo-usd"></ion-icon>Price</p> {{ result.price }} $</div>
+      <div ion-item *ngIf="!isSubscription(result)"><p><ion-icon name="calendar" ></ion-icon>Time</p> {{ result.time.startTime | date: "longDate" }}</div>
       <div ion-item *ngIf="isSubscription(result)">
-        <p>Period:</p>
+        <p><ion-icon name="calendar" ></ion-icon>Period</p>
         {{ result.period.startTime | date: "longDate" }} to
         {{ result.period.endTime | date: "longDate" }}
       </div>
-      <div ion-item *ngIf="searchFilters.indexOf('playType') > -1"><p>Type:</p> {{ result.type }}</div>
-      <div ion-item *ngIf="searchFilters.indexOf('trafficType') > -1"><p>Traffic:</p> {{ result.traffic }}</div>
-      <div ion-item *ngIf="searchFilters.indexOf('manager') > -1"><p>Manager:</p> {{ result.manager }}</div>
+      <div ion-item *ngIf="searchFilters.indexOf('playType') > -1"><p><ion-icon name="checkmark-circle"></ion-icon>Type</p> {{ result.type }}</div>
+      <div ion-item *ngIf="searchFilters.indexOf('trafficType') > -1"><p><ion-icon name="people"></ion-icon>Traffic</p> {{ result.traffic }}</div>
+      <div ion-item *ngIf="searchFilters.indexOf('manager') > -1"><p><ion-icon name="contact"></ion-icon>Manager</p> {{ result.manager }}</div>
     </ion-list>
   </ion-card>
 </ion-content>
