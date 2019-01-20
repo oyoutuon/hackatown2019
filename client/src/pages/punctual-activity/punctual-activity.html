@@ -9,16 +9,39 @@
     </ion-card-header>
     <img [src]="activity.imgUrl" />
     <ion-list>
-      <div ion-item (click)='onClick()'><p>Location:</p>{{ activity.location.name }}</div>
-      <div ion-item><p>Type:</p>{{ activity.type }}</div>
-      <div ion-item><p>Price:</p>{{ activity.price }} $</div>
-      <div ion-item><p>Date:</p>{{ activity.time.startTime | date: "longDate" }}</div>
-      <div ion-item><p>Time:</p>
+      <div ion-item (click)="onClick()">
+        <p><ion-icon name="pin"></ion-icon>Location:</p>
+        {{ activity.location.name }}
+      </div>
+      <div ion-item>
+        <p><ion-icon name="checkmark-circle"></ion-icon>Type:</p>
+        {{ activity.type }}
+      </div>
+      <div ion-item>
+        <p>
+          <ion-icon name="cash"></ion-icon>
+          Price:
+        </p>
+        {{ activity.price }} $
+      </div>
+      <div ion-item>
+        <p><ion-icon name="calendar"></ion-icon> Date:</p>
+        {{ activity.time.startTime | date: "longDate" }}
+      </div>
+      <div ion-item>
+        <p><ion-icon name="calendar"></ion-icon>Time:</p>
         {{ activity.time.startTime | date: "shortTime" }} to
         {{ activity.time.endTime | date: "shortTime" }}
       </div>
-      <div ion-item><p>Traffic:</p>{{ activity.traffic }}</div>
-      <div ion-item><p>Person in charge:</p>{{ activity.manager }}</div>
+      <div ion-item>
+        <p><ion-icon name="people"></ion-icon>Traffic:</p>
+        {{ activity.traffic }}
+      </div>
+      <div ion-item>
+        <ion-avatar item-start> <img [src]="fakeAvatar" /> </ion-avatar>
+        <p>Person in charge:</p>
+        {{ activity.manager }}
+      </div>
     </ion-list>
     <ion-card-content>
       <ion-card-title>Notes</ion-card-title>
