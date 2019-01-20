@@ -37,14 +37,9 @@
   ></canvas>
 </div>
 
-<div>
+<div *ngIf="locations && state == 'map'">
   <h2>Parks</h2>
-  <agm-map
-    [zoom]="11"
-    *ngIf="locations && state == 'map'"
-    [latitude]="lat"
-    [longitude]="lng"
-  >
+  <agm-map [zoom]="11" [latitude]="lat" [longitude]="lng">
     <div *ngFor="let park of locations">
       <agm-marker *ngIf="park.lat" [latitude]="park.lat" [longitude]="park.lng">
         <agm-info-window>{{ park.name }}</agm-info-window></agm-marker
