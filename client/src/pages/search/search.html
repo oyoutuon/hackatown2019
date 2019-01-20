@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-    <form>
+    <form (submit)="onSubmit($event)">
         <ion-item>
           <ion-label>Sport</ion-label>
           <ion-input type="text" [(ngModel)]="sport" name="sport"></ion-input>

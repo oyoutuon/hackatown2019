@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 import { Activity, SubscriptionActivity } from "../../../../common/activity";
 import { SubscriptionActivityPage } from "../subscription-activity/subscription-activity";
-import { mockActivities, mockParks } from "../../assets/data/mocks";
+import { mockParks } from "../../assets/data/mocks";
 import { Location } from "../../../../common/location";
 
 @Component({
@@ -10,11 +10,12 @@ import { Location } from "../../../../common/location";
   templateUrl: "results.html"
 })
 export class ResultsPage {
-  results: Activity[] = mockActivities;
+  results: Activity[];
 
   parks: Location[] = mockParks;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     console.log(this.results);
+    this.results = this.navParams.get('results');
   }
 
   ionViewDidLoad() {}
