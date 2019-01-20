@@ -8,7 +8,7 @@
       <ion-card-title> {{ location.name }} </ion-card-title>
     </ion-card-header>
     <div padding>
-      <agm-map [latitude]="location.lat" [longitude]="location.lng">
+      <agm-map [zoom]="13" [latitude]="location.lat" [longitude]="location.lng">
         <agm-marker
           [latitude]="location.lat"
           [longitude]="location.lng"

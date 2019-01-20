@@ -27,7 +27,7 @@ export class LocationPage {
         const geocoder = new google.maps.Geocoder();
         const { lat, lng } = this.location;
         geocoder.geocode({ location: { lat, lng } }, (results, status) => {
-          this.location.address = results[0].address_components.join(" ");
+          this.location.address = results[0].formatted_address;
           console.log(results, status);
         });
       }
