@@ -15,6 +15,7 @@ import { LocationPage } from "../pages/location/location";
 import { HttpClientModule } from "@angular/common/http";
 
 import { AgmCoreModule } from "@agm/core";
+import { DataProvider } from '../providers/data/data';
 @NgModule({
   declarations: [
     MyApp,
@@ -48,7 +49,8 @@ import { AgmCoreModule } from "@agm/core";
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    DataProvider
   ]
 })
 export class AppModule {}
