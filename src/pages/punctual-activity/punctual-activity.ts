@@ -1,14 +1,14 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 import { PunctualActivity } from "../../../common/activity";
-import { mockPunctualActivty } from "../../assets/data/mocks";
+import { mockPunctualActivity } from "../../assets/data/mocks";
 
 @Component({
   selector: "page-punctual-activity",
   templateUrl: "punctual-activity.html"
 })
 export class PunctualActivityPage {
-  activity: PunctualActivity = mockPunctualActivty;
+  activity: PunctualActivity = mockPunctualActivity;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     console.log(this.activity);
