@@ -20,7 +20,7 @@
   
           <ion-item>
             <ion-label>Location</ion-label>
-            <ion-input type="text" [(ngModel)]="activity.location.address" name="location"></ion-input>
+            <ion-input type="text" [(ngModel)]="activity.location.name" name="location"></ion-input>
           </ion-item>
   
           <ion-item>
@@ -43,16 +43,12 @@
           <!-- Punctual -->
           <div *ngIf="isSubscription === false">
             <ion-item>
-              <ion-label>Date</ion-label>
-              <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="time.startTime" name="punctualDate"></ion-datetime>
-            </ion-item>
-            <ion-item>
               <ion-label>Start Time</ion-label>
-              <ion-datetime displayFormat="hh:mm A" [(ngModel)]="time.startTime" name="punctualStartTime"></ion-datetime>
+              <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="time.startTime" name="punctualStartTime"></ion-datetime>
             </ion-item>
             <ion-item>
               <ion-label>End Time</ion-label>
-              <ion-datetime displayFormat="hh:mm A" [(ngModel)]="time.endTime" name="punctualEndTime"></ion-datetime>
+              <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="time.endTime" name="punctualEndTime"></ion-datetime>
             </ion-item>
           </div>
 
@@ -73,7 +69,7 @@
             <ion-textarea [(ngModel)]="activity.description" name="description"></ion-textarea>
           </ion-item>
   
-          <button ion-button type="submit" block>Search</button>
+          <button ion-button type="submit" block>Create</button>
         </form>
   </ion-content>
   

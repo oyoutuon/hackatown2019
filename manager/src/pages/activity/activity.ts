@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 import { Activity, SubscriptionActivity } from "../../../../common/activity";
+import { ActivitiesPage } from "../activities/activities";
 
 @Component({
   selector: "page-activity",
@@ -17,5 +18,9 @@ export class ActivityPage {
 
   isSubscription(result: any): result is SubscriptionActivity {
     return result.period !== undefined;
+  }
+
+  onClick() {
+    this.navCtrl.push(ActivitiesPage);
   }
 }
