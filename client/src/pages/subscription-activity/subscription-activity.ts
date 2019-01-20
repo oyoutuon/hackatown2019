@@ -11,14 +11,12 @@ export class SubscriptionActivityPage {
   activity: SubscriptionActivity;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.activity = this.navParams.get('activity');
+    this.activity = this.navParams.get("activity");
   }
 
   onClick() {
-    this.navCtrl.push(LocationPage, {location: this.activity.location});
+    this.navCtrl.push(LocationPage, { location: this.activity.location });
   }
 
-  ionViewDidLoad() {
-    console.log("ionViewDidLoad SubscriptionActivityPage");
-  }
+  ionViewDidLoad() {}
 }

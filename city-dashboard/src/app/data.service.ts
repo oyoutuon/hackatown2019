@@ -1,12 +1,15 @@
-import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Location } from "../../../../common/location";
-import { Activity } from "../../../../common/activity";
+import { HttpClient } from "@angular/common/http";
+
+import { Activity } from "../../../common/activity";
+import { Location } from "../../../common/location";
 
 const SERVER_URL = "https://hackatown2019-server.herokuapp.com/";
 
-@Injectable()
-export class DataProvider {
+@Injectable({
+  providedIn: "root"
+})
+export class DataService {
   locations: Location[];
   activities: Activity[];
 
