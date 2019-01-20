@@ -12,6 +12,7 @@ import { ResultsPage } from "../pages/results/results";
 import { PunctualActivityPage } from "../pages/punctual-activity/punctual-activity";
 import { SubscriptionActivityPage } from "../pages/subscription-activity/subscription-activity";
 import { LocationPage } from "../pages/location/location";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AgmCoreModule } from "@agm/core";
 @NgModule({
@@ -27,6 +28,7 @@ import { AgmCoreModule } from "@agm/core";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyAuFeSreL0UefHrw_HKXkXeYZPtapIJdMg"

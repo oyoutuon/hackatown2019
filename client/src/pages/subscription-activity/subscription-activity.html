@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar> <ion-title>subscription-activity</ion-title> </ion-navbar>
+  <ion-navbar> <ion-title>ACTIVITY</ion-title> </ion-navbar>
 </ion-header>
 
 <ion-content padding>
@@ -9,7 +9,7 @@
     </ion-card-header>
     <img [src]="activity.imgUrl" />
     <ion-list>
-      <div ion-item><p>Location:</p>{{ activity.location.name }}</div>
+      <div ion-item (click)='onClick()'><p>Location:</p>{{ activity.location.name }}</div>
       <div ion-item><p>Type:</p>{{ activity.type }}</div>
       <div ion-item><p>Price:</p>{{ activity.price }} $</div>
       <div ion-item><p>Period:</p>
