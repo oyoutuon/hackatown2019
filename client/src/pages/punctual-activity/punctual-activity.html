@@ -12,7 +12,7 @@
       <div ion-item (click)='onClick()'><p>Location:</p>{{ activity.location.name }}</div>
       <div ion-item><p>Type:</p>{{ activity.type }}</div>
       <div ion-item><p>Price:</p>{{ activity.price }} $</div>
-      <div ion-item><p>Date:</p>{{ activity.time.dotw }}, {{ activity.time.startTime | date: "longDate" }}</div>
+      <div ion-item><p>Date:</p>{{ activity.time.startTime | date: "longDate" }}</div>
       <div ion-item><p>Time:</p>
         {{ activity.time.startTime | date: "shortTime" }} to
         {{ activity.time.endTime | date: "shortTime" }}
