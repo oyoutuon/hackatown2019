@@ -1,6 +1,5 @@
 import faker from "faker";
 import moment from "moment";
-// import { parseString } from "xml2js";
 
 import { pools } from "./pools";
 import {
@@ -35,6 +34,7 @@ const poolActivities = [
 const trafficTypes = ["Usually empty", "Some waiting time", "Very busy"];
 
 mockPools.forEach((pool: Location) => {
+  const date = moment().add(Math.floor(Math.random() * 30), "days");
   mockActivities.push({
     description: faker.lorem.paragraph(),
     sport: poolActivities[Math.floor(Math.random() * poolActivities.length)],
@@ -44,7 +44,9 @@ mockPools.forEach((pool: Location) => {
     traffic: trafficTypes[Math.floor(Math.random() * trafficTypes.length)],
     imgUrl: faker.image.fashion(),
     price: faker.finance.amount(),
-    time: { startTime: null, endTime: null }
+    time: {
+      startTime: date.toDate(), 
+      endTime: date.add(Math.floor(Math.random() * 3), "hours").toDate() }
   } as PunctualActivity);
 });
 
