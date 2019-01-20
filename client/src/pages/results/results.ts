@@ -2,7 +2,8 @@ import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 import { Activity, SubscriptionActivity } from "../../../../common/activity";
 import { SubscriptionActivityPage } from "../subscription-activity/subscription-activity";
-import { mockActivities } from "../../assets/data/mocks";
+import { mockActivities, mockParks } from "../../assets/data/mocks";
+import { Location } from "../../../../common/location";
 
 @Component({
   selector: "page-results",
@@ -11,6 +12,7 @@ import { mockActivities } from "../../assets/data/mocks";
 export class ResultsPage {
   results: Activity[] = mockActivities;
 
+  parks: Location[] = mockParks;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     console.log(this.results);
   }

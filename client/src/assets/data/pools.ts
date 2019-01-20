@@ -599,7 +599,7 @@ export const pools = {
       "properties": {
         "ID_UEV": 5072841,
         "TYPE": "Piscine extérieure",
-        "NOM": "Complexe aquatique – Société du parc Jean-Drapeau",
+        "NOM": "Complexe aquatique – Société du park Jean-Drapeau",
         "ARRONDISSE": "Ville-Marie",
         "ADRESSE": "1, Circuit Gilles-Villeneuve,",
         "PROPRIETE": "Municipale",
@@ -617,7 +617,7 @@ export const pools = {
       "properties": {
         "ID_UEV": 5072841,
         "TYPE": "Piscine extérieure",
-        "NOM": "Complexe aquatique – Société du parc Jean-Drapeau",
+        "NOM": "Complexe aquatique – Société du park Jean-Drapeau",
         "ARRONDISSE": "Ville-Marie",
         "ADRESSE": "1, Circuit Gilles-Villeneuve,",
         "PROPRIETE": "Municipale",
