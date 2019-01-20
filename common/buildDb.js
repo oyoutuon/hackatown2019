@@ -8,8 +8,8 @@ MongoClient.connect(
   function(err, client) {
     client
       .db()
-      .collection("activities")
-      .insertMany(mocks.mockActivities)
+      .collection("locations")
+      .insertMany(mocks.mockLocations)
       .then(res => {
         console.log("inserted successfully");
       })

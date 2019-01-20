@@ -3,7 +3,15 @@ const moment = require("moment");
 
 const pools = require("./pools").pools;
 const parkActivities = require("./parks").parkActivities;
-
+const days = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday"
+];
 const mockActivities = [];
 const mockPools = pools.places.map(pool => {
   const p = {
@@ -57,7 +65,7 @@ mockPools.forEach(pool => {
         type: playTypes[Math.floor(Math.random() * playTypes.length)],
         manager: faker.name.firstName() + " " + faker.name.lastName(),
         traffic: trafficTypes[Math.floor(Math.random() * trafficTypes.length)],
-        imgUrl: faker.image.fashion(),
+        imgUrl: faker.image.nature(),
         price: parseFloat(faker.finance.amount()),
         time: {
           startTime: date.toDate(),
@@ -65,6 +73,16 @@ mockPools.forEach(pool => {
         }
       });
     } else {
+      const times = [];
+      for (let index = 0; index < Math.random() * 2 + 2; index++) {
+        times.push([
+          {
+            dotw: days[Math.floor(Math.random() * days.length)],
+            startTime: date.toDate(),
+            endTime: date.add(Math.floor(Math.random() * 3), "hours").toDate()
+          }
+        ]);
+      }
       mockActivities.push({
         description: faker.lorem.paragraph(),
         sport:
@@ -73,14 +91,9 @@ mockPools.forEach(pool => {
         type: playTypes[Math.floor(Math.random() * playTypes.length)],
         manager: faker.name.firstName() + " " + faker.name.lastName(),
         traffic: trafficTypes[Math.floor(Math.random() * trafficTypes.length)],
-        imgUrl: faker.image.fashion(),
+        imgUrl: faker.image.nature(),
         price: parseFloat(faker.finance.amount()),
-        times: [
-          {
-            startTime: date.toDate(),
-            endTime: date.add(Math.floor(Math.random() * 3), "hours").toDate()
-          }
-        ],
+        times,
         period: {
           startTime: date.toDate(),
           endTime: date
@@ -119,7 +132,7 @@ mockParks.forEach(park => {
   if (Math.random() < 0.5) {
     mockActivities.push({
       description: faker.lorem.paragraph(),
-      imgUrl: faker.image.image(),
+      imgUrl: faker.image.nature(),
       location: park,
       manager: faker.name.firstName() + " " + faker.name.lastName(),
       price: parseFloat(faker.finance.amount()),
@@ -132,6 +145,16 @@ mockParks.forEach(park => {
       type: playTypes[Math.floor(Math.random() * playTypes.length)]
     });
   } else {
+    const times = [];
+    for (let index = 0; index < Math.random() * 2 + 2; index++) {
+      times.push([
+        {
+          dotw: days[Math.floor(Math.random() * days.length)],
+          startTime: date.toDate(),
+          endTime: date.add(Math.floor(Math.random() * 3), "hours").toDate()
+        }
+      ]);
+    }
     mockActivities.push({
       description: faker.lorem.paragraph(),
       imgUrl: faker.image.image(),
@@ -139,12 +162,7 @@ mockParks.forEach(park => {
       manager: faker.name.firstName() + " " + faker.name.lastName(),
       price: parseFloat(faker.finance.amount()),
       sport: parkSports[Math.floor(Math.random() * parkSports.length)],
-      times: [
-        {
-          startTime: date.toDate(),
-          endTime: date.add(Math.floor(Math.random() * 3), "hours").toDate()
-        }
-      ],
+      times,
       period: {
         startTime: date.toDate(),
         endTime: date.add(Math.floor(Math.random() * 30) + 60, "days").toDate()
