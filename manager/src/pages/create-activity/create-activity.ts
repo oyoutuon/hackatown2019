@@ -21,8 +21,8 @@ export class CreateActivityPage {
   activity: Activity = {
     sport: '',
     location: {
-      'address': '',
-      'name': 'New Location',
+      'address': '1234 rue PolyWow',
+      'name': '',
       'email': 'Zackery_Gleason@yahoo.com',
       'phoneNumber': '028.923.7795'
     },
