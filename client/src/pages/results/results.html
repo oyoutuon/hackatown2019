@@ -1,13 +1,17 @@
 <ion-header>
-  <ion-navbar> <ion-title>RESULTS</ion-title> </ion-navbar>
+  <ion-navbar>
+    <ion-title>RESULTS</ion-title>
+  </ion-navbar>
 </ion-header>
 
 <ion-content padding id="content">
   <ion-card *ngFor="let result of results" (click)="onSelect(result)">
+    
     <ion-card-header>
       <ion-card-title color="primary" *ngIf="isSubscription(result)">Subscription</ion-card-title>
       <ion-card-title color="danger" *ngIf="!isSubscription(result)">One Session</ion-card-title>
     </ion-card-header>
+
     <ion-list>
       <div ion-item><p><ion-icon name="body"></ion-icon>Sport</p> {{ result.sport }}</div>
       <div ion-item><p><ion-icon name="pin"></ion-icon>Location</p> {{ result.location.name }}</div>
@@ -22,5 +26,6 @@
       <div ion-item *ngIf="searchFilters.indexOf('trafficType') > -1"><p><ion-icon name="people"></ion-icon>Traffic</p> {{ result.traffic }}</div>
       <div ion-item *ngIf="searchFilters.indexOf('manager') > -1"><p><ion-icon name="contact"></ion-icon>Manager</p> {{ result.manager }}</div>
     </ion-list>
+
   </ion-card>
 </ion-content>

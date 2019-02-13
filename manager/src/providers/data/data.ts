@@ -10,7 +10,7 @@ export class DataProvider {
   locations: Location[];
   activities: Activity[];
 
-  constructor(public http: HttpClient) {}
+  constructor(public http: HttpClient) { }
 
   getActivities() {
     if (!this.activities) {

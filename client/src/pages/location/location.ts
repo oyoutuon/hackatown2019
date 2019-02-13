@@ -5,6 +5,7 @@ import { HttpClient } from "@angular/common/http";
 import { MapsAPILoader } from "@agm/core";
 
 const GEOCODING_URL = "https://maps.googleapis.com/maps/api/geocode/json";
+
 @Component({
   selector: "page-location",
   templateUrl: "location.html"

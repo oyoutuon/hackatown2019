@@ -1,13 +1,18 @@
 <ion-header>
-  <ion-navbar> <ion-title>ACTIVITY</ion-title> </ion-navbar>
+  <ion-navbar>
+    <ion-title>ACTIVITY</ion-title>
+  </ion-navbar>
 </ion-header>
 
 <ion-content padding id="content">
   <ion-card>
+
     <ion-card-header>
       <ion-card-title> {{ activity.sport }}</ion-card-title>
     </ion-card-header>
+
     <img [src]="activity.imgUrl" />
+
     <ion-list>
       <div ion-item (click)="onClick()">
         <p><ion-icon name="pin"></ion-icon>Address</p>
@@ -43,10 +48,13 @@
         {{ activity.manager }}
       </div>
     </ion-list>
+
     <ion-card-content>
       <ion-card-title>Notes</ion-card-title>
       <p>{{ activity.description }}</p>
     </ion-card-content>
+
     <div text-center><button small ion-button disabled>Register</button></div>
+
   </ion-card>
 </ion-content>

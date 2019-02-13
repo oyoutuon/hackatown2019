@@ -7,7 +7,7 @@ const SERVER_URL = "https://hackatown2019-server.herokuapp.com/";
   providedIn: "root"
 })
 export class DataService {
-  constructor(public http: HttpClient) {}
+  constructor(public http: HttpClient) { }
 
   getActivities() {
     return this.http.get(SERVER_URL + "activities/").toPromise();

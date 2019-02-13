@@ -13,7 +13,6 @@ import { LocationPage } from "../location/location";
 })
 export class DebugPage {
   keys = Object.keys;
-  constructor(public navCtrl: NavController, public navParams: NavParams) { }
 
   pages = {
     landing: LandingPage,
@@ -23,4 +22,6 @@ export class DebugPage {
     "subscription-activity": SubscriptionActivityPage,
     location: LocationPage
   };
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) { }
 }

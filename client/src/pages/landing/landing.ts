@@ -10,6 +10,7 @@ export class LandingPage {
   searchPage = SearchPage;
   message: string = "";
   password: string = "";
+
   constructor(public navCtrl: NavController, public navParams: NavParams) { }
 
   onLogIn() {

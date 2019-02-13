@@ -1,21 +1,24 @@
 <ion-header>
-  <ion-navbar> <ion-title>LOCATION</ion-title> </ion-navbar>
+  <ion-navbar>
+    <ion-title>LOCATION</ion-title>
+  </ion-navbar>
 </ion-header>
 
 <ion-content padding id="content">
   <ion-card *ngIf="location">
+    
     <ion-card-header>
       <ion-card-title> {{ location.name }} </ion-card-title>
     </ion-card-header>
+
     <div padding>
       <agm-map [zoom]="13" [latitude]="location.lat" [longitude]="location.lng">
-        <agm-marker
-          [latitude]="location.lat"
-          [longitude]="location.lng"
-        ></agm-marker>
+        <agm-marker [latitude]="location.lat" [longitude]="location.lng"></agm-marker>
       </agm-map>
     </div>
+
     <ion-list>
+
       <div ion-item>
         <p>
           <ion-icon name="pin"></ion-icon>
@@ -23,14 +26,22 @@
         </p>
         {{ location.address }}
       </div>
+
       <div ion-item>
-        <p><ion-icon name="mail"></ion-icon>Email:</p>
+        <p>
+          <ion-icon name="mail"></ion-icon>Email:
+        </p>
         {{ location.email }}
       </div>
+
       <div ion-item>
-        <p><ion-icon name="call"></ion-icon>Phone Number:</p>
+        <p>
+          <ion-icon name="call"></ion-icon>Phone Number:
+        </p>
         {{ location.phoneNumber }}
       </div>
+
     </ion-list>
+
   </ion-card>
 </ion-content>
