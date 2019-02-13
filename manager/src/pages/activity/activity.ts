@@ -14,13 +14,11 @@ export class ActivityPage {
     this.activity = this.navParams.get("activity");
   }
 
-  ionViewDidLoad() {}
-
   isSubscription(result: any): result is SubscriptionActivity {
     return result.period !== undefined;
   }
 
-  onClick() {
+  returnToList() {
     this.navCtrl.push(ActivitiesPage);
   }
 }

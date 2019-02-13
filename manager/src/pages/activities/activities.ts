@@ -21,7 +21,7 @@ export class ActivitiesPage {
 
   ionViewDidLoad() {
     this.dataProvider.getActivities().then((data: Activity[]) => {
-      this.activities = data.sort((a, b) => a.price - b.price).slice(1,10);
+      this.activities = data.sort((a, b) => a.price - b.price).slice(0, 10);
     });
   }
 

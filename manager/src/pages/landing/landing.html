@@ -1,33 +1,47 @@
 <ion-header>
-    <ion-navbar> <ion-title>Manager Landing</ion-title> </ion-navbar>
-  </ion-header>
-  <ion-content padding>
+  <ion-navbar>
+    <ion-title>Manager Landing</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
   <ion-card padding-vertical>
-  <ion-card-content padding text-center>
-    <div text-center><ion-img id="avatar" src="/assets/imgs/profile.jpeg"></ion-img></div>
-    <ion-card-title>Login with your VDM Account</ion-card-title>
-    <ion-list>
-      <ion-item>
-        <ion-label stacked>Username</ion-label>
-        <ion-input disabled type="text" placeholder="Already logged in as Marcus Phan"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label stacked>Password<p>{{ message }}</p></ion-label>
-        <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
-      </ion-item>
-    </ion-list>
-    <div padding-top>
-      <button ion-button (click)="onLogIn()">Log In</button>
-    </div>
-  
-    <div padding>or</div>
 
-    <a [navPush]="activitiesPage"> <h3 ion-text color="light">Continue without login</h3> </a>
+    <ion-card-content padding text-center>
+      <div text-center>
+        <ion-img id="avatar" src="/assets/imgs/profile.jpeg"></ion-img>
+      </div>
 
+      <ion-card-title>Login with your VDM Account</ion-card-title>
+      
+      <ion-list>
 
-  </ion-card-content>
+        <ion-item>
+          <ion-label stacked>Username</ion-label>
+          <ion-input disabled type="text" placeholder="Already logged in as Marcus Phan"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Password<p>{{ message }}</p>
+          </ion-label>
+          <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+        </ion-item>
+
+      </ion-list>
+
+      <div padding-top>
+        <button ion-button (click)="onLogIn()">Log In</button>
+      </div>
+
+      <div padding>or</div>
+
+      <a [navPush]="activitiesPage">
+        <h3 ion-text color="light">Continue without login</h3>
+      </a>
+
+    </ion-card-content>
   </ion-card>
   <ion-item>
-      <ion-label stacked>Note: VDM stands for "Ville de Montréal"</ion-label>
+    <ion-label stacked>Note: VDM stands for "Ville de Montréal"</ion-label>
   </ion-item>
-  </ion-content>
+</ion-content>

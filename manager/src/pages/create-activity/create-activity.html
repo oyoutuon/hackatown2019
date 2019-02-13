@@ -1,75 +1,73 @@
 <ion-header>
+  <ion-navbar>
+    <ion-title>create-activity</ion-title>
+  </ion-navbar>
+</ion-header>
 
-    <ion-navbar>
-      <ion-title>create-activity</ion-title>
-    </ion-navbar>
-  
-  </ion-header>
-  
-  
-  <ion-content padding>
-      <ion-card-header>
-        <ion-card-title color="primary" *ngIf="isSubscription">Subscription</ion-card-title>
-        <ion-card-title color="danger" *ngIf="isSubscription === false">Punctual</ion-card-title>
-      </ion-card-header>
-      <form (submit)="onSubmit()">
-          <ion-item>
-            <ion-label>Sport</ion-label>
-            <ion-input type="text" [(ngModel)]="activity.sport" name="sport"></ion-input>
-          </ion-item>
-  
-          <ion-item>
-            <ion-label>Location</ion-label>
-            <ion-input type="text" [(ngModel)]="activity.location.name" name="location"></ion-input>
-          </ion-item>
-  
-          <ion-item>
-            <ion-label>Price</ion-label>
-            <ion-input type="number" [(ngModel)]="activity.price" name="price"></ion-input>
-          </ion-item>
 
-          <!-- Subscription -->
-          <div *ngIf="isSubscription">
-            <ion-item>
-              <ion-label>Start Date</ion-label>
-              <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="period.startTime" name="subscriptionStart"></ion-datetime>
-            </ion-item>
-            <ion-item>
-              <ion-label>End Date</ion-label>
-              <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="period.endTime" name="subscriptionEnd"></ion-datetime>
-            </ion-item>
-          </div>
-          
-          <!-- Punctual -->
-          <div *ngIf="isSubscription === false">
-            <ion-item>
-              <ion-label>Start Time</ion-label>
-              <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="time.startTime" name="punctualStartTime"></ion-datetime>
-            </ion-item>
-            <ion-item>
-              <ion-label>End Time</ion-label>
-              <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="time.endTime" name="punctualEndTime"></ion-datetime>
-            </ion-item>
-          </div>
+<ion-content padding>
+  <ion-card-header>
+    <ion-card-title color="primary" *ngIf="isSubscription">Subscription</ion-card-title>
+    <ion-card-title color="danger" *ngIf="isSubscription === false">Punctual</ion-card-title>
+  </ion-card-header>
 
-          <ion-item>
-            <ion-label>Type</ion-label>
-            <ion-select [(ngModel)]="activity.type" name="type">
-              <ion-option *ngFor="let mockType of mockTypes" [value]="mockType">{{ mockType }}</ion-option>
-            </ion-select>
-          </ion-item>
-  
-          <ion-item>
-            <ion-label>Manager</ion-label>
-            <ion-input type="text" [(ngModel)]="activity.manager" name="manager"></ion-input>
-          </ion-item>
+  <form (submit)="onSubmit()">
+    <ion-item>
+      <ion-label>Sport</ion-label>
+      <ion-input type="text" [(ngModel)]="activity.sport" name="sport"></ion-input>
+    </ion-item>
 
-          <ion-item>
-            <ion-label>Description</ion-label>
-            <ion-textarea [(ngModel)]="activity.description" name="description"></ion-textarea>
-          </ion-item>
-  
-          <button ion-button type="submit" block>Create</button>
-        </form>
-  </ion-content>
-  
+    <ion-item>
+      <ion-label>Location</ion-label>
+      <ion-input type="text" [(ngModel)]="activity.location.name" name="location"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Price</ion-label>
+      <ion-input type="number" [(ngModel)]="activity.price" name="price"></ion-input>
+    </ion-item>
+
+    <!-- Subscription -->
+    <div *ngIf="isSubscription">
+      <ion-item>
+        <ion-label>Start Date</ion-label>
+        <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="period.startTime" name="subscriptionStart"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>End Date</ion-label>
+        <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="period.endTime" name="subscriptionEnd"></ion-datetime>
+      </ion-item>
+    </div>
+
+    <!-- Punctual -->
+    <div *ngIf="isSubscription === false">
+      <ion-item>
+        <ion-label>Start Time</ion-label>
+        <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="time.startTime" name="punctualStartTime"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>End Time</ion-label>
+        <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="time.endTime" name="punctualEndTime"></ion-datetime>
+      </ion-item>
+    </div>
+
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-select [(ngModel)]="activity.type" name="type">
+        <ion-option *ngFor="let mockType of mockTypes" [value]="mockType">{{ mockType }}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Manager</ion-label>
+      <ion-input type="text" [(ngModel)]="activity.manager" name="manager"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-textarea [(ngModel)]="activity.description" name="description"></ion-textarea>
+    </ion-item>
+
+    <button ion-button type="submit" block>Create</button>
+  </form>
+</ion-content>

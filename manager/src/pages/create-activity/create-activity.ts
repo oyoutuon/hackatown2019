@@ -89,6 +89,4 @@ export class CreateActivityPage {
 
     this.navCtrl.push(ActivityPage, { activity: body.activity });
   }
-
-  ionViewDidLoad() {}
 }

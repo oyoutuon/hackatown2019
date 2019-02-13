@@ -19,6 +19,4 @@ export class PunctualActivityPage {
   onClick() {
     this.navCtrl.push(LocationPage, { location: this.activity.location });
   }
-
-  ionViewDidLoad() {}
 }

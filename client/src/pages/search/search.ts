@@ -84,10 +84,6 @@ export class SearchPage {
       results: filterResults,
       searchFilters: searchFilters
     });
-
-  }
-
-  ionViewDidLoad() {
   }
 
   between(x: number, min: number, max: number) {

@@ -7,12 +7,16 @@
 </ion-header>
 
 <ion-content padding>
+  
   <button margin-left ion-button (click)="createNewActivity()">Create New Activity</button>
+
   <ion-card *ngFor="let activity of activities" (click)="onSelect(activity)">
+
     <ion-card-header>
       <ion-card-title color="primary" *ngIf="isSubscription(activity)">Subscription</ion-card-title>
       <ion-card-title color="danger" *ngIf="!isSubscription(activity)">Punctual</ion-card-title>
     </ion-card-header>
+
     <ion-list>
       <div ion-item><p>Sport:</p> {{ activity.sport }}</div>
       <div ion-item><p>Location:</p> {{ activity.location.name }}</div>
@@ -30,5 +34,7 @@
       <div ion-item><p>Traffic:</p> {{ activity.traffic }}</div>
       <div ion-item><p>Manager:</p> {{ activity.manager }}</div>
     </ion-list>
+
   </ion-card>
+
 </ion-content>

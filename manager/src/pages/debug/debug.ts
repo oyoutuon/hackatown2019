@@ -12,8 +12,6 @@ import { CreateActivityPage } from "../create-activity/create-activity";
 export class DebugPage {
   keys = Object.keys;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
-
   pages = {
     landing: LandingPage,
     activities: ActivitiesPage,
@@ -21,5 +19,5 @@ export class DebugPage {
     "create-activity": CreateActivityPage
   };
 
-  ionViewDidLoad() {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) { }
 }

@@ -20,11 +20,9 @@ export class ResultsPage {
     this.searchFilters = this.navParams.get('searchFilters');
   }
 
-  ionViewDidLoad() {}
-
   onSelect(result: Activity) {
     const page = this.isSubscription(result) ? SubscriptionActivityPage : PunctualActivityPage;
-    this.navCtrl.push(page, {activity: result});
+    this.navCtrl.push(page, { activity: result });
   }
 
   isSubscription(result: any): result is SubscriptionActivity {

@@ -17,6 +17,4 @@ export class SubscriptionActivityPage {
   onClick() {
     this.navCtrl.push(LocationPage, { location: this.activity.location });
   }
-
-  ionViewDidLoad() {}
 }

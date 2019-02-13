@@ -10,13 +10,11 @@ export class LandingPage {
   searchPage = SearchPage;
   message: string = "";
   password: string = "";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) { }
 
   onLogIn() {
     this.password === "marcus"
       ? this.navCtrl.push(SearchPage)
       : (this.message = "Wrong password");
   }
-
-  ionViewDidLoad() {}
 }
